@@ -20,12 +20,12 @@ export default function Header() {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
     }`}>
-      <div className="container mx-auto flex items-center justify-between py-4">
+      <div className="container mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <img
             src="/src/logo/main-logo.png"
             alt="Al Namariq Group of Companies Logo"
-            className="h-16 w-auto"
+            className="h-24 w-auto"
           />
         </Link>
         <nav className="hidden md:flex space-x-6">

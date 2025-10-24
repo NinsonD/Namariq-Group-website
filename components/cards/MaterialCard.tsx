@@ -15,11 +15,18 @@ interface MaterialCardProps {
 
 export default function MaterialCard({ material }: MaterialCardProps) {
   return (
-    <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
-      <div className="w-full h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
-        <span className="text-white text-4xl font-bold">{material.title.charAt(0)}</span>
+    <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
+      <div className="w-full h-48 bg-gray-200 flex items-center justify-center relative overflow-hidden">
+        <img
+          src="/images/Rock-wool.webp"
+          alt="Rock Wool Material"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+          <span className="text-white text-4xl font-bold">{material.title.charAt(0)}</span>
+        </div>
       </div>
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-grow">
         <div className="flex items-center justify-between mb-2">
           <span className="text-sm text-purple-600 font-medium bg-purple-100 px-2 py-1 rounded">
             {material.category}
@@ -31,7 +38,7 @@ export default function MaterialCard({ material }: MaterialCardProps) {
           )}
         </div>
         <h3 className="text-xl font-semibold text-gray-800 mb-2">{material.title}</h3>
-        <p className="text-gray-600 mb-4">{material.shortDesc}</p>
+        <p className="text-gray-600 mb-4 flex-grow">{material.shortDesc}</p>
 
         {material.applications && material.applications.length > 0 && (
           <div className="mb-4">
@@ -65,7 +72,7 @@ export default function MaterialCard({ material }: MaterialCardProps) {
           </div>
         )}
 
-        <div className="flex gap-2">
+        <div className="flex gap-2 mt-auto">
           <Link
             href={`/specialized-materials/${material.slug}`}
             className="flex-1 bg-purple-600 text-white text-center py-2 px-4 rounded-lg font-medium hover:bg-purple-700 transition-colors duration-300"
