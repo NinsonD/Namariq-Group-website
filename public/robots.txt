@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Block access to admin areas (if any in future)
+Disallow: /admin/
+Disallow: /api/admin/
+
+# Block access to private files
+Disallow: /_next/
+Disallow: /api/
+
+# Allow access to sitemap
+Sitemap: https://namariqgroup.com/sitemap.xml
