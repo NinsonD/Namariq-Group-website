@@ -390,18 +390,25 @@ export default function SpecializedMaterialDetailPage({ params }: SpecializedMat
                       </ul>
                     </div>
                   </div>
-                  <div className="bg-gradient-to-br from-purple-100 to-pink-100 p-8 rounded-lg">
-                    <div className="text-center">
-                      <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span className="text-white text-3xl font-bold">{material.title.charAt(0)}</span>
+                  <div className="bg-gray-200 p-8 rounded-lg relative overflow-hidden">
+                    <img
+                      src="/images/Rock-wool.webp"
+                      alt="Rock Wool Material"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div className="relative z-10 bg-black bg-opacity-40 p-8 rounded-lg">
+                      <div className="text-center">
+                        <div className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                          <span className="text-white text-3xl font-bold">{material.title.charAt(0)}</span>
+                        </div>
+                        <h3 className="text-2xl font-bold text-white mb-4">Technical Excellence</h3>
+                        <p className="text-white mb-6">
+                          Engineered for demanding applications where performance and reliability are critical.
+                        </p>
+                        <button className="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300">
+                          Download Technical Sheet
+                        </button>
                       </div>
-                      <h3 className="text-2xl font-bold text-gray-800 mb-4">Technical Excellence</h3>
-                      <p className="text-gray-700 mb-6">
-                        Engineered for demanding applications where performance and reliability are critical.
-                      </p>
-                      <button className="bg-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-purple-700 transition-colors duration-300">
-                        Download Technical Sheet
-                      </button>
                     </div>
                   </div>
                 </div>
@@ -509,8 +516,15 @@ export default function SpecializedMaterialDetailPage({ params }: SpecializedMat
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {mockSpecializedMaterials.filter(m => m.id !== material.id && m.category === material.category).slice(0, 3).map((relatedMaterial) => (
               <div key={relatedMaterial.id} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <div className="w-full h-32 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center mb-4">
-                  <span className="text-white text-2xl font-bold">{relatedMaterial.title.charAt(0)}</span>
+                <div className="w-full h-32 bg-gray-200 flex items-center justify-center relative overflow-hidden mb-4">
+                  <img
+                    src="/images/Rock-wool.webp"
+                    alt="Rock Wool Material"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                    <span className="text-white text-2xl font-bold">{relatedMaterial.title.charAt(0)}</span>
+                  </div>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">{relatedMaterial.title}</h3>
                 <p className="text-gray-600 mb-4">{relatedMaterial.shortDesc}</p>

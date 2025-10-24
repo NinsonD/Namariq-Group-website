@@ -13,24 +13,33 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   return (
-    <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
-      <div className="w-full h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-        <span className="text-white text-4xl font-bold">{product.title.charAt(0)}</span>
-      </div>
-      <div className="p-6">
-        <div className="flex items-center justify-between mb-2">
-          <span className="text-sm text-blue-600 font-medium bg-blue-100 px-2 py-1 rounded">
-            {product.category}
-          </span>
-          {product.featured && (
-            <span className="text-xs text-orange-600 font-medium bg-orange-100 px-2 py-1 rounded">
-              Featured
-            </span>
-          )}
+    <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
+      <div className="w-full h-48 bg-gray-200 flex items-center justify-center relative overflow-hidden">
+        <img
+          src="/images/Rock-wool.webp"
+          alt="Rock Wool Material"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+          <span className="text-white text-4xl font-bold">{product.title.charAt(0)}</span>
         </div>
-        <h3 className="text-xl font-semibold text-gray-800 mb-2">{product.title}</h3>
-        <p className="text-gray-600 mb-4">{product.shortDesc}</p>
-        <div className="flex gap-2">
+      </div>
+      <div className="p-6 flex-1 flex flex-col">
+        <div className="flex-1">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm text-blue-600 font-medium bg-blue-100 px-2 py-1 rounded">
+              {product.category}
+            </span>
+            {product.featured && (
+              <span className="text-xs text-orange-600 font-medium bg-orange-100 px-2 py-1 rounded">
+                Featured
+              </span>
+            )}
+          </div>
+          <h3 className="text-xl font-semibold text-gray-800 mb-2">{product.title}</h3>
+          <p className="text-gray-600">{product.shortDesc}</p>
+        </div>
+        <div className="flex gap-2 mt-4">
           <Link
             href={`/products/${product.slug}`}
             className="flex-1 bg-blue-600 text-white text-center py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300"
