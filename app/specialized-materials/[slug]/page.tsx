@@ -275,7 +275,7 @@ export default function SpecializedMaterialDetailPage({ params }: SpecializedMat
   return (
     <div>
       {/* Breadcrumb */}
-      <div className="bg-gray-50 py-4">
+      {/* <div className="bg-gray-50 py-4">
         <div className="container mx-auto px-4">
           <nav className="text-sm text-gray-600">
             <Link href="/" className="hover:text-purple-600">Home</Link>
@@ -285,7 +285,7 @@ export default function SpecializedMaterialDetailPage({ params }: SpecializedMat
             <span className="text-gray-800">{material.title}</span>
           </nav>
         </div>
-      </div>
+      </div> */}
 
       {/* Material Header */}
       <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-700 text-white">
