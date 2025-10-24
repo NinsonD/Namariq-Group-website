@@ -134,7 +134,7 @@ export default function ServiceDetailPage({ params }: ServiceDetailPageProps) {
   return (
     <div>
       {/* Breadcrumb */}
-      {/* <div className="bg-gray-50 py-4">
+      <div className="bg-gray-50 py-4">
         <div className="container mx-auto px-4">
           <nav className="text-sm text-gray-600">
             <Link href="/" className="hover:text-blue-600">Home</Link>
@@ -144,7 +144,7 @@ export default function ServiceDetailPage({ params }: ServiceDetailPageProps) {
             <span className="text-gray-800">{service.title}</span>
           </nav>
         </div>
-      </div> */}
+      </div>
 
       {/* Service Header */}
       <section className="py-16 bg-gradient-to-r from-green-600 to-blue-700 text-white">

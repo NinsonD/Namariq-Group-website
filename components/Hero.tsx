@@ -9,21 +9,21 @@ const slides = [
     subtitle: 'Welcome to Al Namariq Group of Companies, one of the UAE\'s most trusted and diversified business groups. With decades of excellence, we specialize in building materials, interior décor, insulation, water pump systems, IT solutions, and medical services — delivering quality, reliability, and value across every project.',
     cta: 'Explore Divisions',
     ctaLink: '/our-divisions',
-    bg: 'from-blue-600 to-purple-700',
+    image: '/images/hero1.webp',
   },
   {
     title: 'Building Materials Trading',
     subtitle: 'Comprehensive construction materials and supplies across 7 UAE branches. Authorized distributors of GYPSEMNA, KNAUF, GYPROC, ROCKFON, GRUNDFOS, HILTI, ESPA, VALERI',
     cta: 'View Products',
     ctaLink: '/products',
-    bg: 'from-green-600 to-blue-700',
+    image: '/images/hero2.webp',
   },
   {
     title: 'Specialized Solutions',
     subtitle: 'Advanced materials engineered for superior performance, safety, and sustainability in demanding applications. From thermal insulation to waterproofing membranes.',
     cta: 'Learn More',
     ctaLink: '/specialized-materials',
-    bg: 'from-purple-600 to-pink-700',
+    image: '/images/hero3.webp',
   },
 ]
 
@@ -54,7 +54,11 @@ export default function Hero() {
             index === currentSlide ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <div className={`absolute inset-0 bg-gradient-to-r ${slide.bg} opacity-90`}></div>
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${slide.image})` }}
+          ></div>
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
           <div className="relative z-10 flex items-center justify-center h-full">
             <div className="text-center text-white px-4 max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
