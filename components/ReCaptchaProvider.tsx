@@ -1,6 +1,13 @@
 'use client'
 
-import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3'
+import dynamic from 'next/dynamic'
+
+const GoogleReCaptchaProvider = dynamic(
+  () => import('react-google-recaptcha-v3').then(mod => mod.GoogleReCaptchaProvider),
+  {
+    ssr: false,
+  }
+)
 
 interface ReCaptchaProviderProps {
   children: React.ReactNode

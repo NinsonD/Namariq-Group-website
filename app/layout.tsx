@@ -5,10 +5,14 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ClientWrapper from '../components/ClientWrapper'
 import CookieConsentBanner from '../components/CookieConsent'
-import AnalyticsProvider from '../components/AnalyticsProvider'
 import ReCaptchaProvider from '../components/ReCaptchaProvider'
 import { generateSEO, generateOrganizationSchema, generateWebsiteSchema } from '../lib/seo'
 import Script from 'next/script'
+import dynamic from 'next/dynamic'
+
+const AnalyticsProvider = dynamic(() => import('../components/AnalyticsProvider'), {
+  ssr: false,
+})
 
   const inter = Inter({ subsets: ['latin'] })
 

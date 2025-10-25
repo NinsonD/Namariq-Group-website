@@ -1,8 +1,12 @@
 'use client'
 
+import dynamic from 'next/dynamic'
 import { useEffect } from 'react'
-import CookieConsent from 'react-cookie-consent'
 import { initGA, initFacebookPixel } from '../lib/analytics'
+
+const CookieConsent = dynamic(() => import('react-cookie-consent'), {
+  ssr: false,
+})
 
 const CookieConsentBanner = () => {
   const handleAccept = () => {
