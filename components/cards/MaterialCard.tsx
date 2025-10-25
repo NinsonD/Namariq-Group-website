@@ -15,7 +15,7 @@ interface MaterialCardProps {
 
 export default function MaterialCard({ material }: MaterialCardProps) {
   return (
-    <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
+    <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:shadow-purple-500/20 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full cursor-pointer">
       <div className="w-full h-48 bg-gray-200 flex items-center justify-center relative overflow-hidden">
         <img
           src="/images/Rock-wool.webp"

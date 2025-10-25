@@ -29,42 +29,42 @@ export default function Header() {
           />
         </Link>
         <nav className="hidden md:flex space-x-6">
-          <Link href="/" className={`transition-colors duration-300 ${
+          <Link href="/" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
             isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
           }`}>
             Home
           </Link>
-          <Link href="/about" className={`transition-colors duration-300 ${
+          <Link href="/about" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
             isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
           }`}>
             About Us
           </Link>
-          <Link href="/our-divisions" className={`transition-colors duration-300 ${
+          <Link href="/our-divisions" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
             isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
           }`}>
             Our Divisions
           </Link>
-          <Link href="/products" className={`transition-colors duration-300 ${
+          <Link href="/products" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
             isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
           }`}>
             Products
           </Link>
-          <Link href="/services" className={`transition-colors duration-300 ${
+          <Link href="/services" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
             isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
           }`}>
             Services
           </Link>
-          <Link href="/specialized-materials" className={`transition-colors duration-300 ${
+          <Link href="/specialized-materials" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
             isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
           }`}>
             Specialized Materials
           </Link>
-          <Link href="/contact" className={`transition-colors duration-300 ${
+          <Link href="/contact" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
             isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
           }`}>
             Contact Us
           </Link>
-          <Link href="/downloads" className={`transition-colors duration-300 ${
+          <Link href="/downloads" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
             isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
           }`}>
             Downloads

@@ -11,7 +11,7 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ service }: ServiceCardProps) {
   return (
-    <div className="bg-gray-50 rounded-lg p-8 text-center hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
+    <div className="bg-gray-50 rounded-lg p-8 text-center hover:shadow-xl hover:shadow-blue-500/20 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full cursor-pointer">
       <div className="flex-1">
         <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
           <span className="text-blue-600 text-4xl">{service.icon}</span>

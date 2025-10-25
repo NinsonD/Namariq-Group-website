@@ -9,7 +9,7 @@ const slides = [
     subtitle: 'Welcome to Al Namariq Group of Companies, one of the UAE\'s most trusted and diversified business groups. With decades of excellence, we specialize in building materials, interior décor, insulation, water pump systems, IT solutions, and medical services — delivering quality, reliability, and value across every project.',
     cta: 'Explore Divisions',
     ctaLink: '/our-divisions',
-    image: '/images/hero1.webp',
+    image: '/images/hero1.png',
   },
   {
     title: 'Building Materials Trading',
