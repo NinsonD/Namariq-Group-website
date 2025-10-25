@@ -7,6 +7,7 @@ export const mockProducts = [
     category: 'Building Materials',
     image: '/images/gypsum-board.jpg',
     featured: true,
+    icon: '🏗️',
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ export const mockProducts = [
     category: 'Ceiling Systems',
     image: '/images/ceiling-tiles.jpg',
     featured: true,
+    icon: '🏠',
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ export const mockProducts = [
     category: 'Water Solutions',
     image: '/images/valeri-pumps.jpg',
     featured: true,
+    icon: '💧',
   },
   {
     id: 4,
@@ -34,6 +37,7 @@ export const mockProducts = [
     category: 'Insulation',
     image: '/images/insulation.jpg',
     featured: true,
+    icon: '🔥',
   },
   {
     id: 5,
@@ -43,6 +47,7 @@ export const mockProducts = [
     category: 'Accessories',
     image: '/images/accessories.jpg',
     featured: false,
+    icon: '🔧',
   },
 ]
 

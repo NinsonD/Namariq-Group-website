@@ -64,11 +64,6 @@ export default function Header() {
           }`}>
             Contact Us
           </Link>
-          <Link href="/downloads" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
-            isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
-          }`}>
-            Downloads
-          </Link>
         </nav>
         <LanguageSwitcher isScrolled={isScrolled} />
       </div>

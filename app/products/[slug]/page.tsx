@@ -163,7 +163,6 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
             {[
               { id: 'overview', label: 'Overview' },
               { id: 'specifications', label: 'Specifications' },
-              { id: 'downloads', label: 'Downloads' },
               { id: 'certifications', label: 'Certifications' }
             ].map((tab) => (
               <button
