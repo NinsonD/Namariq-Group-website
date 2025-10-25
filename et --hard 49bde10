@@ -1,0 +1,14 @@
+[33me4df373[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m Revert "Replace 'Our Products' section with ScrollyImages component: Smooth scrolling product gallery with GSAP animations, using actual product images from public/images folder"
+[33mafa765b[m Replace 'Our Products' section with ScrollyImages component: Smooth scrolling product gallery with GSAP animations, using actual product images from public/images folder
+[33m07a75c0[m Add ScrollyImages component: Smooth scrolling image gallery with GSAP ScrollSmoother, skew effects, and parallax animations
+[33m1504182[m Add GSAP scroll animations: GypsumBoardAnimation component with floating, rotating, bouncing, and waving effects for material showcase
+[33m5875e70[m Add performance and accessibility improvements: focus management, accessible components, skip links, and error boundaries
+[33m1116932[m Animations & Micro-interactions Mobile-first Responsive Design
+[33maaec606[m ## 13. Integrations and Features
+[33m9de2d8a[m docs: Update TODO.md to mark hover effects implementation as complete
+[33md2ea672[m feat: Add hover effects and micro-interactions to cards, buttons, and navigation
+[33mcdc03eb[m made aligment in the cards
+[33m022275a[m card dummy images updated
+[33m73034dd[m curosel images added
+[33meb3e935[m transparent navbar
+[33m646b6e3[m Initial commit: Add Next.js frontend project with .gitignore
