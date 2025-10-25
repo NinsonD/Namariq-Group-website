@@ -6,21 +6,28 @@ import Link from 'next/link'
 const slides = [
   {
     title: 'Construct Solutions & Build Trust',
-    subtitle: 'Welcome to Al Namariq Group of Companies, one of the UAE\'s most trusted and diversified business groups. With decades of excellence, we specialize in building materials, interior décor, insulation, water pump systems, IT solutions, and medical services — delivering quality, reliability, and value across every project.',
+    subtitle: 'Welcome to Al Namariq Group of Companies, one of the UAE\'s most trusted and diversified business groups.',
     cta: 'Explore Divisions',
     ctaLink: '/our-divisions',
     image: '/images/hero1.png',
   },
   {
     title: 'Building Materials Trading',
-    subtitle: 'Comprehensive construction materials and supplies across 7 UAE branches. Authorized distributors of GYPSEMNA, KNAUF, GYPROC, ROCKFON, GRUNDFOS, HILTI, ESPA, VALERI',
+    subtitle: 'Comprehensive construction materials and supplies across 7 UAE branches.',
     cta: 'View Products',
     ctaLink: '/products',
     image: '/images/hero2.webp',
   },
   {
     title: 'Specialized Solutions',
-    subtitle: 'Advanced materials engineered for superior performance, safety, and sustainability in demanding applications. From thermal insulation to waterproofing membranes.',
+    subtitle: 'Advanced materials engineered for superior performance, safety, and sustainability in demanding applications.',
+    cta: 'Learn More',
+    ctaLink: '/specialized-materials',
+    image: '/images/hero3.webp',
+  },
+  {
+    title: 'Water Pump',
+    subtitle: 'Our pump solutions ensure quality at its peak.',
     cta: 'Learn More',
     ctaLink: '/specialized-materials',
     image: '/images/hero3.webp',

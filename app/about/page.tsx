@@ -51,33 +51,15 @@ const teamMembers = [
     department: 'Technical',
     image: '/team/mohammed.jpg',
   },
-  {
-    name: 'Sara Al-Mansoori',
-    role: 'Sales Manager',
-    department: 'Sales',
-    image: '/team/sara.jpg',
-  },
-  {
-    name: 'Omar Al-Farsi',
-    role: 'Project Manager',
-    department: 'Projects',
-    image: '/team/omar.jpg',
-  },
-  {
-    name: 'Layla Al-Khalidi',
-    role: 'Quality Assurance Manager',
-    department: 'Quality',
-    image: '/team/layla.jpg',
-  },
 ]
 
 const certifications = [
   { name: 'ISO 9001', image: '/certifications/iso9001.png' },
-  { name: 'ISO 14001', image: '/certifications/iso14001.png' },
-  { name: 'OHSAS 18001', image: '/certifications/ohsas18001.png' },
-  { name: 'CE Mark', image: '/certifications/ce-mark.png' },
-  { name: 'UAE Standards', image: '/certifications/uae-standards.png' },
-  { name: 'GCC Accreditation', image: '/certifications/gcc-accreditation.png' },
+  { name: 'ISO 14001', image: '/certifications/iso9001.png' },
+  { name: 'OHSAS 18001', image: '/certifications/iso9001.png' },
+  { name: 'CE Mark', image: '/certifications/iso9001.png' },
+  { name: 'UAE Standards', image: '/certifications/iso9001.png' },
+  { name: 'GCC Accreditation', image: '../public/certifications/iso9001.png' },
 ]
 
 export default function About() {
