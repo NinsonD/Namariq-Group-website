@@ -4,27 +4,53 @@ import './globals.css'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ClientWrapper from '../components/ClientWrapper'
+import CookieConsentBanner from '../components/CookieConsent'
+import AnalyticsProvider from '../components/AnalyticsProvider'
+import ReCaptchaProvider from '../components/ReCaptchaProvider'
+import { generateSEO, generateOrganizationSchema, generateWebsiteSchema } from '../lib/seo'
+import Script from 'next/script'
 
-const inter = Inter({ subsets: ['latin'] })
+  const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  title: 'Al Namariq Group of Companies',
-  description: 'Leading provider of building materials, interior décor, insulation, water pump systems, IT solutions, and medical services across the UAE',
-}
+export const metadata: Metadata = generateSEO()
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const organizationSchema = generateOrganizationSchema()
+  const websiteSchema = generateWebsiteSchema()
+
   return (
     <html lang="en">
+      <head>
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema),
+          }}
+        />
+      </head>
       <body className={`${inter.className} antialiased flex flex-col min-h-screen`}>
-        <ClientWrapper>
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer />
-        </ClientWrapper>
+        <ReCaptchaProvider>
+          <AnalyticsProvider>
+            <ClientWrapper>
+              <Header />
+              <main className="flex-grow">{children}</main>
+              <Footer />
+              <CookieConsentBanner />
+            </ClientWrapper>
+          </AnalyticsProvider>
+        </ReCaptchaProvider>
       </body>
     </html>
   )

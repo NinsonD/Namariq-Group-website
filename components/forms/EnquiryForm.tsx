@@ -25,6 +25,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '../ui/modal'
+import { useReCaptcha } from '../../lib/recaptcha'
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -53,6 +54,8 @@ export function EnquiryForm({ trigger }: { trigger: React.ReactNode }) {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
+  const { executeCaptcha } = useReCaptcha()
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -71,11 +74,18 @@ export function EnquiryForm({ trigger }: { trigger: React.ReactNode }) {
     setSubmitStatus('idle')
 
     try {
+      // Execute reCAPTCHA
+      const recaptchaToken = await executeCaptcha('enquiry_submit')
+
+      if (!recaptchaToken) {
+        throw new Error('reCAPTCHA verification failed')
+      }
+
+      // TODO: Replace with actual API call that includes recaptchaToken
+      console.log('Enquiry submitted:', { ...values, recaptchaToken })
+
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000))
-
-      // TODO: Replace with actual API call
-      console.log('Enquiry submitted:', values)
 
       setSubmitStatus('success')
       form.reset()
@@ -84,6 +94,7 @@ export function EnquiryForm({ trigger }: { trigger: React.ReactNode }) {
         setSubmitStatus('idle')
       }, 2000)
     } catch (error) {
+      console.error('Form submission error:', error)
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)

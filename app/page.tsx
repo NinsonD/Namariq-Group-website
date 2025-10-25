@@ -1,8 +1,15 @@
 'use client'
 
+import { useEffect, useRef } from 'react'
 import Link from 'next/link'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Hero from '../components/Hero'
 import { mockProducts, mockServices, mockClients, mockTestimonials } from '../lib/mockData'
+import { generateSEO } from '../lib/seo'
+import type { Metadata } from 'next'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const mockSpecializedMaterials = [
   {
@@ -25,13 +32,124 @@ const mockSpecializedMaterials = [
   },
 ]
 
+export const metadata: Metadata = generateSEO({
+  title: 'Home',
+  description: 'Welcome to Al Namariq Group of Companies - Your trusted partner for building materials, interior décor, insulation, water pump systems, IT solutions, and medical services across the UAE.',
+  url: 'https://alnamariq.com',
+})
+
 export default function Home() {
+  const aboutRef = useRef<HTMLElement>(null)
+  const productsRef = useRef<HTMLElement>(null)
+  const servicesRef = useRef<HTMLElement>(null)
+  const materialsRef = useRef<HTMLElement>(null)
+  const clientsRef = useRef<HTMLElement>(null)
+  const testimonialsRef = useRef<HTMLElement>(null)
+  const ctaRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    // GSAP animations for scroll-triggered effects
+    const sections = [
+      { ref: aboutRef, delay: 0.1 },
+      { ref: productsRef, delay: 0.2 },
+      { ref: servicesRef, delay: 0.3 },
+      { ref: materialsRef, delay: 0.4 },
+      { ref: clientsRef, delay: 0.5 },
+      { ref: testimonialsRef, delay: 0.6 },
+      { ref: ctaRef, delay: 0.7 },
+    ]
+
+    sections.forEach(({ ref, delay }) => {
+      if (ref.current) {
+        gsap.fromTo(
+          ref.current,
+          {
+            opacity: 0,
+            y: 50,
+            scale: 0.95,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 1,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: ref.current,
+              start: 'top 80%',
+              end: 'bottom 20%',
+              toggleActions: 'play none none reverse',
+            },
+          }
+        )
+      }
+    })
+
+    // Stagger animation for product cards
+    if (productsRef.current) {
+      const productCards = productsRef.current.querySelectorAll('.product-card')
+      gsap.fromTo(
+        productCards,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: productsRef.current,
+            start: 'top 80%',
+          },
+        }
+      )
+    }
+
+    // Stagger animation for service cards
+    if (servicesRef.current) {
+      const serviceCards = servicesRef.current.querySelectorAll('.service-card')
+      gsap.fromTo(
+        serviceCards,
+        { opacity: 0, scale: 0.8, rotation: -10 },
+        {
+          opacity: 1,
+          scale: 1,
+          rotation: 0,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: 'back.out(1.7)',
+          scrollTrigger: {
+            trigger: servicesRef.current,
+            start: 'top 80%',
+          },
+        }
+      )
+    }
+
+    // Floating animation for CTA buttons
+    if (ctaRef.current) {
+      const ctaButtons = ctaRef.current.querySelectorAll('a, button')
+      gsap.to(ctaButtons, {
+        y: 'random(-10, 10)',
+        duration: 'random(2, 3)',
+        ease: 'power1.inOut',
+        repeat: -1,
+        yoyo: true,
+        stagger: 0.3,
+      })
+    }
+
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill())
+    }
+  }, [])
+
   return (
     <div>
       <Hero />
 
       {/* About Teaser */}
-      <section className="py-16 bg-gray-50">
+      <section ref={aboutRef} className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">About Al Namariq Group of Companies</h2>
@@ -51,12 +169,12 @@ export default function Home() {
       </section>
 
       {/* Products Spotlight */}
-      <section className="py-16 bg-white">
+      <section ref={productsRef} className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Our Products</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {mockProducts.map((product) => (
-              <div key={product.id} className="bg-gradient-to-br from-blue-500 to-blue-700 text-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div key={product.id} className="product-card bg-gradient-to-br from-blue-500 to-blue-700 text-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <h3 className="text-xl font-semibold mb-4">{product.title}</h3>
                 <p className="mb-4">{product.shortDesc}</p>
                 <Link href="/products" className="text-blue-200 hover:text-white font-medium">View Products →</Link>
@@ -67,12 +185,12 @@ export default function Home() {
       </section>
 
       {/* Services Highlights */}
-      <section className="py-16 bg-gray-50">
+      <section ref={servicesRef} className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Our Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {mockServices.map((service) => (
-              <div key={service.id} className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+              <div key={service.id} className="service-card text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-blue-600 text-4xl">{service.icon}</span>
                 </div>
@@ -85,7 +203,7 @@ export default function Home() {
       </section>
 
       {/* Specialized Materials Teaser */}
-      <section className="py-16 bg-white">
+      <section ref={materialsRef} className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Specialized Materials</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -101,7 +219,7 @@ export default function Home() {
       </section>
 
       {/* Clients Strip */}
-      <section className="py-16 bg-gray-50">
+      <section ref={clientsRef} className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-12">Trusted by Leading Companies</h2>
           <div className="overflow-hidden">
@@ -135,7 +253,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Carousel */}
-      <section className="py-16 bg-white">
+      <section ref={testimonialsRef} className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">What Our Clients Say</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -165,7 +283,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+      <section ref={ctaRef} className="py-16 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Start Your Project?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
