@@ -6,7 +6,7 @@ export interface SEOProps {
   keywords?: string[]
   image?: string
   url?: string
-  type?: 'website' | 'article' | 'product'
+  type?: 'website' | 'article'
   publishedTime?: string
   modifiedTime?: string
   author?: string
@@ -66,7 +66,7 @@ export function generateSEO(props: SEOProps = {}): Metadata {
       siteName: baseSEO.title,
       images: [
         {
-          url: image,
+          url: image || '',
           width: 1200,
           height: 630,
           alt: title,
@@ -84,7 +84,7 @@ export function generateSEO(props: SEOProps = {}): Metadata {
       card: 'summary_large_image',
       title,
       description,
-      images: [image || baseSEO.image],
+      // images: [image || baseSEO.image],
       creator: '@alnamariq',
       site: '@alnamariq',
     },
