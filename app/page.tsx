@@ -94,7 +94,7 @@ export default function Home() {
       </section>
 
       {/* Specialized Materials Teaser */}
-      <section className="section-padding bg-gradient-to-br from-purple-50 to-pink-50">
+      {/* <section className="section-padding bg-gradient-to-br from-purple-50 to-pink-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12 text-gradient">Specialized Materials</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -116,64 +116,102 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Clients Strip */}
       <section className="py-20 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-12 text-gradient">Trusted by Leading Companies</h2>
-          <div className="slider">
-            <div className="slide-track">
+        </div>
+          <div className="logos">
+            <div className="logo_items">
               {[
+                '/src/brands/Anchor allied.png',
                 '/src/brands/Ariston.png',
+                '/src/brands/Bosch.png',
+                '/src/brands/Davey.png',
+                '/src/brands/Ebara.png',
                 '/src/brands/ESPA.png',
                 '/src/brands/grohe.png',
                 '/src/brands/grundfos.png',
                 '/src/brands/gyproc.png',
                 '/src/brands/gypsemna.png',
+                '/src/brands/Hilti.png',
                 '/src/brands/KAJ.png',
                 '/src/brands/Kanuf Danoline.png',
                 '/src/brands/Kanuf.png',
+                '/src/brands/Knauf Insolution.png',
+                '/src/brands/Osip.png',
                 '/src/brands/Rockfon.png',
-                '/src/brands/Skyline.jpg',
+                '/src/brands/Ruud.png',
+                '/src/brands/Saudi Rock Wool.png',
+                '/src/brands/Schneider.png',
+                '/src/brands/Skyline.png',
+                '/src/brands/Stanley.png',
                 '/src/brands/USG ME.png',
-                '/src/brands/Valeri.png'
-              ].map((logo, index) => (
-                <div key={`${logo}-${index}`} className="slide">
-                  <img
-                    src={logo}
-                    alt={`Client logo ${index + 1}`}
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-              ))}
-              {/* Duplicate the logos for seamless loop */}
-              {[
+                '/src/brands/Valeri.png',
+                '/src/brands/Visaka.png'
+              ].concat([
+                '/src/brands/Anchor allied.png',
                 '/src/brands/Ariston.png',
+                '/src/brands/Bosch.png',
+                '/src/brands/Davey.png',
+                '/src/brands/Ebara.png',
                 '/src/brands/ESPA.png',
                 '/src/brands/grohe.png',
                 '/src/brands/grundfos.png',
                 '/src/brands/gyproc.png',
                 '/src/brands/gypsemna.png',
+                '/src/brands/Hilti.png',
                 '/src/brands/KAJ.png',
                 '/src/brands/Kanuf Danoline.png',
                 '/src/brands/Kanuf.png',
+                '/src/brands/Knauf Insolution.png',
+                '/src/brands/Osip.png',
                 '/src/brands/Rockfon.png',
-                '/src/brands/Skyline.jpg',
+                '/src/brands/Ruud.png',
+                '/src/brands/Saudi Rock Wool.png',
+                '/src/brands/Schneider.png',
+                '/src/brands/Skyline.png',
+                '/src/brands/Stanley.png',
                 '/src/brands/USG ME.png',
-                '/src/brands/Valeri.png'
-              ].map((logo, index) => (
-                <div key={`${logo}-duplicate-${index}`} className="slide">
-                  <img
-                    src={logo}
-                    alt={`Client logo ${index + 1}`}
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
+                '/src/brands/Valeri.png',
+                '/src/brands/Visaka.png'
+              ]).concat([
+                '/src/brands/Anchor allied.png',
+                '/src/brands/Ariston.png',
+                '/src/brands/Bosch.png',
+                '/src/brands/Davey.png',
+                '/src/brands/Ebara.png',
+                '/src/brands/ESPA.png',
+                '/src/brands/grohe.png',
+                '/src/brands/grundfos.png',
+                '/src/brands/gyproc.png',
+                '/src/brands/gypsemna.png',
+                '/src/brands/Hilti.png',
+                '/src/brands/KAJ.png',
+                '/src/brands/Kanuf Danoline.png',
+                '/src/brands/Kanuf.png',
+                '/src/brands/Knauf Insolution.png',
+                '/src/brands/Osip.png',
+                '/src/brands/Rockfon.png',
+                '/src/brands/Ruud.png',
+                '/src/brands/Saudi Rock Wool.png',
+                '/src/brands/Schneider.png',
+                '/src/brands/Skyline.png',
+                '/src/brands/Stanley.png',
+                '/src/brands/USG ME.png',
+                '/src/brands/Valeri.png',
+                '/src/brands/Visaka.png'
+              ]).map((logo, index) => (
+                <img
+                  key={`${logo}-${index}`}
+                  src={logo}
+                  alt={`Client logo ${index + 1}`}
+                />
               ))}
             </div>
           </div>
-        </div>
       </section>
 
       {/* Testimonials Carousel */}

@@ -81,49 +81,34 @@ export default function About() {
 
       {/* Mission, Vision, Values */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {/* Mission */}
-            <div className="text-center">
-              <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h3>
-              <p className="text-gray-600">
-                To deliver integrated solutions that combine technology, quality, and human values, enhancing productivity and sustainability in every sector we operate.
+        {/* Mission */}
+        <div className="responsive-container-block bigContainer">
+          <div className="responsive-container-block Container">
+            <img className="mainImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/eaboutus1.svg" />
+            <div className="allText aboveText">
+              <p className="text-blk headingText">
+                Our Mission
+              </p>
+              <p className="text-blk subHeadingText">
+                To be the leading provider of comprehensive construction solutions in the UAE, delivering exceptional quality, innovation, and customer satisfaction across all our divisions.
+              </p>
+              <p className="text-blk description">
+                We are committed to providing superior construction materials, specialized solutions, and professional services that exceed our clients' expectations while maintaining the highest standards of safety, sustainability, and ethical business practices.
               </p>
             </div>
-
-            {/* Vision */}
-            <div className="text-center">
-              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h3>
-              <p className="text-gray-600">
-                To be the absolute and decisive choice for clients who value excellence, cost-effectiveness, and long-term partnership in every field we serve.
+          </div>
+          <div className="responsive-container-block Container bottomContainer">
+            <img className="mainImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/xpraup2.svg" />
+            <div className="allText bottomText">
+              <p className="text-blk headingText">
+                Our Vision
               </p>
-            </div>
-
-            {/* Values */}
-            <div className="text-center">
-              <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Our Values</h3>
-              <ul className="text-gray-600 space-y-2">
-                <li>• Integrity & Trust</li>
-                <li>• Quality & Innovation</li>
-                <li>• Customer Focus</li>
-                <li>• Sustainability</li>
-              </ul>
+              <p className="text-blk subHeadingText">
+                To become the most trusted and innovative multi-sector enterprise in the Middle East, setting new standards in construction, technology, and healthcare industries.
+              </p>
+              <p className="text-blk description">
+                We envision a future where our comprehensive solutions drive sustainable development, technological advancement, and superior healthcare services, creating lasting value for our clients, partners, and communities across the region.
+              </p>
             </div>
           </div>
         </div>
@@ -152,7 +137,7 @@ export default function About() {
       </section>
 
       {/* Team */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Our Leadership Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -170,7 +155,7 @@ export default function About() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Certifications */}
       <section className="py-16 bg-gray-50">

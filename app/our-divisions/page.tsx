@@ -9,7 +9,7 @@ export default function OurDivisions() {
 
   const divisions = [
     {
-      name: 'Building Materials Tradingj',
+      name: 'Building Materials Trading',
       description: 'The foundation of our group, Al Namariq Building Materials Trading, supplies a wide range of construction and interior finishing products to the UAE\'s leading contractors, consultants, and retailers.',
       icon: '🏗️',
       services: ['Gypsum & Cement Boards', 'Ceiling Systems & Tiles', 'Channels & Profiles', 'Accessories'],

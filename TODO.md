@@ -3,3 +3,7 @@
 - [x] Update the Clients Strip section in app/page.tsx with new carousel structure
 - [x] Add necessary CSS styles to app/globals.css for the new carousel
 - [ ] Test the new carousel on the homepage
+
+- [x] Update the Clients Strip section in app/page.tsx with new carousel structure
+- [x] Add necessary CSS styles to app/globals.css for the new carousel
+- [x] Test the new carousel on the homepage

@@ -79,13 +79,13 @@ export default function Header() {
           }`}>
             Services
           </Link>
-          <Link href="/specialized-materials" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
+          {/* <Link href="/specialized-materials" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
             pathname === '/specialized-materials' ? 'underline' : ''
           } ${
             isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
           }`}>
             Specialized Materials
-          </Link>
+          </Link> */}
           <Link href="/contact" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
             pathname === '/contact' ? 'underline' : ''
           } ${

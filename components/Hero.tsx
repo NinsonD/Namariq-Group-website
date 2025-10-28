@@ -5,29 +5,29 @@ import Link from 'next/link'
 
 const slides = [
   {
-    title: 'Construct Solutions & Build Trust',
-    subtitle: 'Welcome to Al Namariq Group of Companies, one of the UAE\'s most trusted and diversified business groups.',
-    cta: 'Explore Divisions',
-    ctaLink: '/our-divisions',
+    title: 'Al Namariq Group',
+    subtitle: 'Established in the UAE, a multi-division enterprise specializing in construction materials trading, interior contracting, insulation systems, pumping solutions, IT technology, and healthcare services.',
+    cta: 'Learn More About Us',
+    ctaLink: '/about',
     image: '/images/hero1.jpg',
   },
   {
-    title: 'Building Materials Trading',
-    subtitle: 'Comprehensive construction materials and supplies across 7 UAE branches.',
-    cta: 'View Products',
-    ctaLink: '/products',
+    title: 'Our Divisions',
+    subtitle: 'Operating through 7 branches across the UAE, we provide comprehensive solutions in construction, technology, and healthcare sectors with strong foundations in innovation and customer trust.',
+    cta: 'Explore Divisions',
+    ctaLink: '/our-divisions',
     image: '/images/hero2.jpg',
   },
   {
-    title: 'Specialized Solutions',
-    subtitle: 'Advanced materials engineered for superior performance, safety, and sustainability in demanding applications.',
-    cta: 'Learn More',
-    ctaLink: '/specialized-materials',
+    title: 'Products & Services',
+    subtitle: 'From building materials trading to specialized solutions, we deliver quality and innovation across all our offerings including interior contracting, insulation systems, and pumping solutions.',
+    cta: 'View Products',
+    ctaLink: '/products',
     image: '/images/hero3.jpg',
   },
   {
-    title: 'Water Pump',
-    subtitle: 'Our pump solutions ensure quality at its peak.',
+    title: 'Specialized Materials',
+    subtitle: 'Advanced fire resistant panels, thermal insulation boards, and waterproofing membranes engineered for superior performance, safety, and sustainability in demanding applications.',
     cta: 'Learn More',
     ctaLink: '/specialized-materials',
     image: '/images/hero4.jpg',
@@ -67,7 +67,7 @@ export default function Hero() {
           ></div>
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
           <div className="relative z-10 flex items-center justify-center h-full">
-            <div className="text-center text-white px-4 max-w-4xl mx-auto">
+            <div className="text-center text-white px-4 max-w-4xl mx-auto min-h-[400px] flex flex-col justify-center">
               <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
                 {slide.title}
               </h1>
