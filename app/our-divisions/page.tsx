@@ -9,35 +9,35 @@ export default function OurDivisions() {
 
   const divisions = [
     {
-      name: 'Building Materials Trading Division',
+      name: 'Building Materials Tradingj',
       description: 'The foundation of our group, Al Namariq Building Materials Trading, supplies a wide range of construction and interior finishing products to the UAE\'s leading contractors, consultants, and retailers.',
       icon: '🏗️',
       services: ['Gypsum & Cement Boards', 'Ceiling Systems & Tiles', 'Channels & Profiles', 'Accessories'],
       color: 'bg-blue-500'
     },
     {
-      name: 'Skyline Décor Division',
+      name: 'Skyline Décor',
       description: 'Established in 1995, Skyline Décor is a leading name in interior cladding, false ceiling, and partition systems across the UAE.',
       icon: '🔧',
       services: ['Decorative False Ceilings', 'Acoustic Ceiling Panels', 'Metal & Wooden Ceiling Systems', 'Fire-rated Drywall Partitions'],
       color: 'bg-green-500'
     },
     {
-      name: 'Insulation Division',
+      name: 'Insulation Division' ,
       description: 'We deliver high-performance thermal and acoustic insulation materials to improve comfort, safety, and energy efficiency.',
       icon: '📋',
       services: ['Rockwool Insulation', 'Glass Wool Insulation', 'Phenolic Foam Insulation', 'Installation Services'],
       color: 'bg-orange-500'
-    },
+    },                                                                                                                                                                            
     {
-      name: 'Water Pump Division (Valeri Pumps)',
+      name: 'Water Pump Division',
       description: 'Valeri Water Pump is our own brand, developed with cutting-edge European technology to meet the UAE\'s infrastructure standards.',
       icon: '💧',
       services: ['Residential Pumps', 'Commercial Pumps', 'Industrial Pumps', 'Pump Service & Maintenance'],
       color: 'bg-purple-500'
     },
     {
-      name: 'Carewell Medical Center',
+      name: 'Carewell Clinics',
       description: 'Located in JVC Dubai, Carewell Clinics deliver excellence in aesthetic dermatology, dentistry, and wellness care.',
       icon: '🏥',
       services: ['Aesthetic Dermatology', 'Dentistry', 'Wellness Care', 'Medical Consultations'],
@@ -56,7 +56,7 @@ export default function OurDivisions() {
     <div>
       {/* <Breadcrumbs items={[]} currentPage="Our Divisions" /> */}
       {/* Hero Section */}
-      <section className="relative text-white py-32" style={{ backgroundImage: 'url(/images/hero1.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <section className="relative text-white py-32" style={{ backgroundImage: 'url(/images/Hire.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -157,7 +157,7 @@ export default function OurDivisions() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16 bg-blue-600 text-white" style={{ backgroundImage: 'url(/images/Hire.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Work with Our Divisions?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">

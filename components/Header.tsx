@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Header() {
+  const pathname = usePathname()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -43,36 +45,50 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6">
           <Link href="/" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
+            pathname === '/' ? 'underline' : ''
+          } ${
             isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
           }`}>
             Home
           </Link>
           <Link href="/about" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
+            pathname === '/about' ? 'underline' : ''
+          } ${
             isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
           }`}>
             About Us
           </Link>
           <Link href="/our-divisions" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
+            pathname === '/our-divisions' ? 'underline' : ''
+          } ${
             isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
           }`}>
             Our Divisions
           </Link>
           <Link href="/products" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
+            pathname === '/products' ? 'underline' : ''
+          } ${
             isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
           }`}>
             Products
           </Link>
           <Link href="/services" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
+            pathname === '/services' ? 'underline' : ''
+          } ${
             isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
           }`}>
             Services
           </Link>
           <Link href="/specialized-materials" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
+            pathname === '/specialized-materials' ? 'underline' : ''
+          } ${
             isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
           }`}>
             Specialized Materials
           </Link>
           <Link href="/contact" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
+            pathname === '/contact' ? 'underline' : ''
+          } ${
             isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
           }`}>
             Contact Us
@@ -102,25 +118,39 @@ export default function Header() {
         <div className="md:hidden fixed inset-0 top-20 bg-black bg-opacity-50 z-40" onClick={closeMobileMenu}>
           <div className="bg-white shadow-lg mx-4 mt-4 rounded-lg overflow-hidden">
             <nav className="flex flex-col py-4">
-              <Link href="/" className="px-6 py-3 text-gray-800 hover:bg-gray-100 hover:text-blue-600 transition-colors duration-300" onClick={closeMobileMenu}>
+              <Link href="/" className={`px-6 py-3 transition-colors duration-300 ${
+                pathname === '/' ? 'bg-blue-100 text-blue-600' : 'text-gray-800 hover:bg-gray-100 hover:text-blue-600'
+              }`} onClick={closeMobileMenu}>
                 Home
               </Link>
-              <Link href="/about" className="px-6 py-3 text-gray-800 hover:bg-gray-100 hover:text-blue-600 transition-colors duration-300" onClick={closeMobileMenu}>
+              <Link href="/about" className={`px-6 py-3 transition-colors duration-300 ${
+                pathname === '/about' ? 'bg-blue-100 text-blue-600' : 'text-gray-800 hover:bg-gray-100 hover:text-blue-600'
+              }`} onClick={closeMobileMenu}>
                 About Us
               </Link>
-              <Link href="/our-divisions" className="px-6 py-3 text-gray-800 hover:bg-gray-100 hover:text-blue-600 transition-colors duration-300" onClick={closeMobileMenu}>
+              <Link href="/our-divisions" className={`px-6 py-3 transition-colors duration-300 ${
+                pathname === '/our-divisions' ? 'bg-blue-100 text-blue-600' : 'text-gray-800 hover:bg-gray-100 hover:text-blue-600'
+              }`} onClick={closeMobileMenu}>
                 Our Divisions
               </Link>
-              <Link href="/products" className="px-6 py-3 text-gray-800 hover:bg-gray-100 hover:text-blue-600 transition-colors duration-300" onClick={closeMobileMenu}>
+              <Link href="/products" className={`px-6 py-3 transition-colors duration-300 ${
+                pathname === '/products' ? 'bg-blue-100 text-blue-600' : 'text-gray-800 hover:bg-gray-100 hover:text-blue-600'
+              }`} onClick={closeMobileMenu}>
                 Products
               </Link>
-              <Link href="/services" className="px-6 py-3 text-gray-800 hover:bg-gray-100 hover:text-blue-600 transition-colors duration-300" onClick={closeMobileMenu}>
+              <Link href="/services" className={`px-6 py-3 transition-colors duration-300 ${
+                pathname === '/services' ? 'bg-blue-100 text-blue-600' : 'text-gray-800 hover:bg-gray-100 hover:text-blue-600'
+              }`} onClick={closeMobileMenu}>
                 Services
               </Link>
-              <Link href="/specialized-materials" className="px-6 py-3 text-gray-800 hover:bg-gray-100 hover:text-blue-600 transition-colors duration-300" onClick={closeMobileMenu}>
+              <Link href="/specialized-materials" className={`px-6 py-3 transition-colors duration-300 ${
+                pathname === '/specialized-materials' ? 'bg-blue-100 text-blue-600' : 'text-gray-800 hover:bg-gray-100 hover:text-blue-600'
+              }`} onClick={closeMobileMenu}>
                 Specialized Materials
               </Link>
-              <Link href="/contact" className="px-6 py-3 text-gray-800 hover:bg-gray-100 hover:text-blue-600 transition-colors duration-300" onClick={closeMobileMenu}>
+              <Link href="/contact" className={`px-6 py-3 transition-colors duration-300 ${
+                pathname === '/contact' ? 'bg-blue-100 text-blue-600' : 'text-gray-800 hover:bg-gray-100 hover:text-blue-600'
+              }`} onClick={closeMobileMenu}>
                 Contact Us
               </Link>
               <div className="px-6 py-3 border-t border-gray-200">

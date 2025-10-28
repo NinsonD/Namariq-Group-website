@@ -9,28 +9,28 @@ const slides = [
     subtitle: 'Welcome to Al Namariq Group of Companies, one of the UAE\'s most trusted and diversified business groups.',
     cta: 'Explore Divisions',
     ctaLink: '/our-divisions',
-    image: '/images/hero1.png',
+    image: '/images/hero1.jpg',
   },
   {
     title: 'Building Materials Trading',
     subtitle: 'Comprehensive construction materials and supplies across 7 UAE branches.',
     cta: 'View Products',
     ctaLink: '/products',
-    image: '/images/hero2.webp',
+    image: '/images/hero2.jpg',
   },
   {
     title: 'Specialized Solutions',
     subtitle: 'Advanced materials engineered for superior performance, safety, and sustainability in demanding applications.',
     cta: 'Learn More',
     ctaLink: '/specialized-materials',
-    image: '/images/hero3.webp',
+    image: '/images/hero3.jpg',
   },
   {
     title: 'Water Pump',
     subtitle: 'Our pump solutions ensure quality at its peak.',
     cta: 'Learn More',
     ctaLink: '/specialized-materials',
-    image: '/images/hero3.webp',
+    image: '/images/hero4.jpg',
   },
 ]
 

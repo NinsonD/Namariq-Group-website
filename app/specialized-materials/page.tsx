@@ -25,7 +25,7 @@ export default function SpecializedMaterials() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative text-white py-32" style={{ backgroundImage: 'url(/images/hero3.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <section className="relative text-white py-32" style={{ backgroundImage: 'url(/images/Hire.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">Specialized Materials</h1>
@@ -152,7 +152,7 @@ export default function SpecializedMaterials() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-700 text-white">
+      <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-700 text-white" style={{ backgroundImage: 'url(/images/Hire.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Need Specialized Solutions?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">

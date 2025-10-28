@@ -56,13 +56,13 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12 text-gradient">Our Products</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {mockProducts.map((product) => (
-              <div key={product.id} className="product-card-modern group">
+              <div key={product.id} className="product-card-modern group"style={{ backgroundImage: 'url(/images/Hire.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="flex items-center justify-center mb-6">
-                  <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                  <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center" style={{ backgroundImage: 'url(/images/Hire.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                     <span className="text-3xl">{product.icon}</span>
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-center">{product.title}</h3>
+                <h3 className="text-xl font-semibold mb-4 text-center" >{product.title}</h3>
                 <p className="mb-6 text-center text-blue-100">{product.shortDesc}</p>
                 <div className="text-center">
                   <Link href="/products" className="text-blue-200 hover:text-white font-medium transition-colors duration-300 group-hover:text-white">
@@ -76,7 +76,7 @@ export default function Home() {
       </section>
 
       {/* Services Highlights */}
-      <section className="section-padding bg-gradient-to-br from-white to-gray-50">
+      <section className="section-padding bg-gradient-to-br from-white to-gray-50"style={{ backgroundImage: 'url(/images/Hire.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12 text-gradient">Our Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -119,11 +119,11 @@ export default function Home() {
       </section>
 
       {/* Clients Strip */}
-      <section className="py-20 bg-gradient-to-r from-gray-100 to-gray-200">
+      <section className="py-20 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-12 text-gradient">Trusted by Leading Companies</h2>
-          <div className="overflow-hidden">
-            <div className="flex animate-scroll">
+          <div className="slider">
+            <div className="slide-track">
               {[
                 '/src/brands/Ariston.png',
                 '/src/brands/ESPA.png',
@@ -139,7 +139,31 @@ export default function Home() {
                 '/src/brands/USG ME.png',
                 '/src/brands/Valeri.png'
               ].map((logo, index) => (
-                <div key={`${logo}-${index}`} className="flex-shrink-0 w-32 h-16 mx-8 flex items-center justify-center bg-white rounded-2xl shadow-depth-lg p-3 hover:shadow-glow transition-all duration-300 transform hover:scale-105">
+                <div key={`${logo}-${index}`} className="slide">
+                  <img
+                    src={logo}
+                    alt={`Client logo ${index + 1}`}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+              ))}
+              {/* Duplicate the logos for seamless loop */}
+              {[
+                '/src/brands/Ariston.png',
+                '/src/brands/ESPA.png',
+                '/src/brands/grohe.png',
+                '/src/brands/grundfos.png',
+                '/src/brands/gyproc.png',
+                '/src/brands/gypsemna.png',
+                '/src/brands/KAJ.png',
+                '/src/brands/Kanuf Danoline.png',
+                '/src/brands/Kanuf.png',
+                '/src/brands/Rockfon.png',
+                '/src/brands/Skyline.jpg',
+                '/src/brands/USG ME.png',
+                '/src/brands/Valeri.png'
+              ].map((logo, index) => (
+                <div key={`${logo}-duplicate-${index}`} className="slide">
                   <img
                     src={logo}
                     alt={`Client logo ${index + 1}`}
@@ -183,7 +207,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="cta-modern relative">
+      <section className="cta-modern relative" style={{ backgroundImage: 'url(/images/Hire.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="absolute inset-0 bg-pattern-dots opacity-10"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-shadow">Ready to Start Your Project?</h2>
