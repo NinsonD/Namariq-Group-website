@@ -1,9 +1,7 @@
-# TODO: Replace Clients Strip Carousel with New Infinite Scrolling Carousel
+# TODO: Remove Unnecessary Sections from Pages
 
-- [x] Update the Clients Strip section in app/page.tsx with new carousel structure
-- [x] Add necessary CSS styles to app/globals.css for the new carousel
-- [ ] Test the new carousel on the homepage
-
-- [x] Update the Clients Strip section in app/page.tsx with new carousel structure
-- [x] Add necessary CSS styles to app/globals.css for the new carousel
-- [x] Test the new carousel on the homepage
+- [x] Remove breadcrumb section from app/products/[slug]/page.tsx
+- [x] Remove "Why Choose Our Services?" section from app/services/page.tsx
+- [x] Remove "Why Choose Our Divisions?" section from app/our-divisions/page.tsx
+- [x] Remove filters and search section from app/products/page.tsx
+- [x] Remove commented team section from app/about/page.tsx

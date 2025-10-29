@@ -21,7 +21,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
       </div>
       <Link
         href={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}
-        className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300 mt-6"
+        className="inline-block bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-red-600 transition-colors duration-300 mt-6"
       >
         Learn More
       </Link>

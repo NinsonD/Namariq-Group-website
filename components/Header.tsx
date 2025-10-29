@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import LanguageSwitcher from './LanguageSwitcher'
+
 
 export default function Header() {
   const pathname = usePathname()
@@ -38,55 +38,55 @@ export default function Header() {
           <img
             src="/src/logo/main-logo.png"
             alt="Al Namariq Group of Companies Logo"
-            className="h-16 md:h-24 w-auto"
+            className="h-12 md:h-16 w-auto"
           />
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6">
-          <Link href="/" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
+          <Link href="/" className={`font-bold transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
             pathname === '/' ? 'underline' : ''
           } ${
             isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
           }`}>
             Home
           </Link>
-          <Link href="/about" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
+          <Link href="/about" className={`font-bold transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
             pathname === '/about' ? 'underline' : ''
           } ${
             isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
           }`}>
             About Us
           </Link>
-          <Link href="/our-divisions" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
+          <Link href="/our-divisions" className={`font-bold transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
             pathname === '/our-divisions' ? 'underline' : ''
           } ${
             isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
           }`}>
             Our Divisions
           </Link>
-          <Link href="/products" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
+          <Link href="/products" className={`font-bold transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
             pathname === '/products' ? 'underline' : ''
           } ${
             isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
           }`}>
             Products
           </Link>
-          <Link href="/services" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
+          <Link href="/services" className={`font-bold transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
             pathname === '/services' ? 'underline' : ''
           } ${
             isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
           }`}>
             Services
           </Link>
-          {/* <Link href="/specialized-materials" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
+          {/* <Link href="/specialized-materials" className={`font-bold transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
             pathname === '/specialized-materials' ? 'underline' : ''
           } ${
             isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
           }`}>
             Specialized Materials
           </Link> */}
-          <Link href="/contact" className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
+          <Link href="/contact" className={`font-bold transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
             pathname === '/contact' ? 'underline' : ''
           } ${
             isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
@@ -109,7 +109,12 @@ export default function Header() {
         </button>
 
         <div className="hidden md:block">
-          <LanguageSwitcher isScrolled={isScrolled} />
+          <a href="https://shop.namariqgroup.com" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center px-4 py-2 rounded-full font-semibold transition-all duration-300 hover:scale-105 bg-primary text-white hover:bg-red-600`}>
+            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+            Shop
+          </a>
         </div>
       </div>
 
@@ -131,7 +136,7 @@ export default function Header() {
               <Link href="/our-divisions" className={`px-6 py-3 transition-colors duration-300 ${
                 pathname === '/our-divisions' ? 'bg-blue-100 text-blue-600' : 'text-gray-800 hover:bg-gray-100 hover:text-blue-600'
               }`} onClick={closeMobileMenu}>
-                Our Divisions
+                Divisions
               </Link>
               <Link href="/products" className={`px-6 py-3 transition-colors duration-300 ${
                 pathname === '/products' ? 'bg-blue-100 text-blue-600' : 'text-gray-800 hover:bg-gray-100 hover:text-blue-600'
@@ -143,18 +148,18 @@ export default function Header() {
               }`} onClick={closeMobileMenu}>
                 Services
               </Link>
-              <Link href="/specialized-materials" className={`px-6 py-3 transition-colors duration-300 ${
-                pathname === '/specialized-materials' ? 'bg-blue-100 text-blue-600' : 'text-gray-800 hover:bg-gray-100 hover:text-blue-600'
-              }`} onClick={closeMobileMenu}>
-                Specialized Materials
-              </Link>
               <Link href="/contact" className={`px-6 py-3 transition-colors duration-300 ${
                 pathname === '/contact' ? 'bg-blue-100 text-blue-600' : 'text-gray-800 hover:bg-gray-100 hover:text-blue-600'
               }`} onClick={closeMobileMenu}>
                 Contact Us
               </Link>
               <div className="px-6 py-3 border-t border-gray-200">
-                <LanguageSwitcher isScrolled={true} />
+                 <a href="https://shop.namariqgroup.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-4 py-2 mx-2 rounded-full font-semibold bg-primary text-white hover:bg-red-600 transition-colors duration-300" onClick={closeMobileMenu}>
+                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+                Shop
+              </a>
               </div>
             </nav>
           </div>

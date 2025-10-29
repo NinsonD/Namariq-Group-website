@@ -2,7 +2,7 @@ interface DivisionCardProps {
   division: {
     name: string
     description: string
-    icon: string
+    image: string
     services: string[]
     color: string
   }
@@ -11,8 +11,7 @@ interface DivisionCardProps {
 export default function DivisionCard({ division }: DivisionCardProps) {
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 flex flex-col h-full">
-      <div className="p-16 text-white" style={{ backgroundImage: 'url(/images/Hire.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <h3 className="text-xl font-bold mb-2">{division.name}</h3>
+      <div className="p-16" style={{ backgroundImage: `url(${division.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       </div>
       <div className="p-6 flex flex-col flex-grow">
         <p className="text-gray-600 mb-4 flex-grow">{division.description}</p>

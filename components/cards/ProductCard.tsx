@@ -1,4 +1,4 @@
-import Link from 'next/link'
+ import Link from 'next/link'
 
 interface ProductCardProps {
   product: {
@@ -42,7 +42,6 @@ export default function ProductCard({ product }: ProductCardProps) {
         <div className="flex gap-2 mt-4">
           <Link
             href={`/products/${product.slug}`}
-            className="flex-1 bg-blue-600 text-white text-center py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300"
           >
             View Details
           </Link>

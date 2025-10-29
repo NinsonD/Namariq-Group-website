@@ -3,7 +3,7 @@
 import { useTranslation } from 'react-i18next'
 import Link from 'next/link'
 import { mockServices } from '../../lib/mockData'
-// import Breadcrumbs from '../../components/Breadcrumbs'
+
 import ServiceCard from '../../components/cards/ServiceCard'
 
 const serviceDetails = {
@@ -65,7 +65,7 @@ export default function Services() {
 
   return (
     <div>
-      {/* <Breadcrumbs items={[]} currentPage="Services" /> */}
+
       {/* Hero Section */}
       <section className="relative text-white py-32" style={{ backgroundImage: 'url(/images/Hire.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -74,7 +74,7 @@ export default function Services() {
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
             Comprehensive construction solutions and expert support services tailored to meet your project requirements.
           </p>
-        </div>
+        </div>  
       </section>
 
       {/* Services Overview */}
@@ -95,56 +95,7 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Why Choose Our Services?</h2>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Expertise</h3>
-              <p className="text-gray-600">Years of industry experience and technical knowledge</p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Quality</h3>
-              <p className="text-gray-600">Premium materials and superior service quality</p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Reliability</h3>
-              <p className="text-gray-600">Consistent delivery and dependable service</p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Innovation</h3>
-              <p className="text-gray-600">Cutting-edge solutions and modern approaches</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Service Process */}
       <section className="py-16 bg-white">
@@ -166,7 +117,7 @@ export default function Services() {
                 { step: '05', title: 'Support', desc: 'Ongoing assistance and maintenance' }
               ].map((item, index) => (
                 <div key={item.step} className="text-center relative">
-                  <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                  <div className="w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                     {item.step}
                   </div>
                   <h3 className="text-lg font-semibold text-gray-800 mb-2">{item.title}</h3>
