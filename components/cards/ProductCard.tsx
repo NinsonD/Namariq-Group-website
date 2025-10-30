@@ -8,6 +8,10 @@ interface ProductCardProps {
     shortDesc: string
     slug: string
     featured?: boolean
+    subcategories?: {
+      title: string
+      items: string[]
+    }[]
   }
 }
 
@@ -37,7 +41,27 @@ export default function ProductCard({ product }: ProductCardProps) {
             )}
           </div>
           <h3 className="text-xl font-semibold text-gray-800 mb-2">{product.title}</h3>
-          <p className="text-gray-600">{product.shortDesc}</p>
+          <p className="text-gray-600 mb-4">{product.shortDesc}</p>
+          {product.subcategories && product.subcategories.length > 0 && (
+            <div className="space-y-2">
+              {product.subcategories.map((sub, index) => (
+                <div key={index}>
+                  <h4 className="text-sm font-medium text-gray-700 mb-1">{sub.title}</h4>
+                  <ul className="text-xs text-gray-500 space-y-1">
+                    {sub.items.slice(0, 3).map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-center">
+                        <span className="w-1 h-1 bg-gray-400 rounded-full mr-2"></span>
+                        {item}
+                      </li>
+                    ))}
+                    {sub.items.length > 3 && (
+                      <li className="text-xs text-gray-400">+{sub.items.length - 3} more...</li>
+                    )}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
         <div className="flex gap-2 mt-4">
           <Link

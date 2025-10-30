@@ -1,53 +1,209 @@
 export const mockProducts = [
   {
     id: 1,
-    title: 'Gypsum & Cement Boards',
-    slug: 'gypsum-cement-boards',
-    shortDesc: 'Regular, Fire-rated, Moisture-resistant, and Specialty boards from Gypsemna, Knauf, Gyproc, UMI',
-    category: 'Building Materials',
+    title: 'BOARDS & TILES',
+    slug: 'boards-tiles',
+    shortDesc: 'Gypsum & Cement Boards, Ceiling Tiles – Gypsum Vinyl & Acoustic',
+    category: 'Boards & Tiles',
     image: '/images/gypsum-board.jpg',
     featured: true,
     icon: '🏗️',
+    subcategories: [
+      {
+        title: 'GYPSUM & CEMENT BOARDS',
+        items: [
+          'REGULAR GYPSUM BOARD',
+          'MOISTURE RESISTANT GYPSUM BOARD',
+          'FIRE RESISTANT GYPSUM BOARD',
+          'FIRE & MOISTURE RESISTANT GYPSUM BOARD',
+          'SPECIAL GYPSUM BOARDS',
+          'CEMENT FIBRE BOARD'
+        ]
+      },
+      {
+        title: 'CEILING TILES – GYPSUM VINYL & ACOUSTIC',
+        items: [
+          'GYPSUM VINYL TILE SYSTEM'
+        ]
+      }
+    ]
   },
   {
     id: 2,
-    title: 'Ceiling Tiles & Profiles',
-    slug: 'ceiling-tiles-profiles',
-    shortDesc: 'Gypsum, Vinyl, Acoustic, and Metal ceiling systems from Skyline, USG, Danoline, Rockfon',
-    category: 'Ceiling Systems',
+    title: 'ACOUSTIC CEILING SOLUTIONS',
+    slug: 'acoustic-ceiling-solutions',
+    shortDesc: 'Gypsum Acoustic Tile, Mineral Fibre Acoustical Tile, Metal Ceiling Tile, Mineral Wool Tile, Wood Wool',
+    category: 'Acoustic Ceiling Solutions',
     image: '/images/ceiling-tiles.jpg',
     featured: true,
     icon: '🏠',
+    subcategories: [
+      {
+        title: 'GYPSUM ACOUSTIC TILE',
+        items: []
+      },
+      {
+        title: 'MINERAL FIBRE ACOUSTICAL TILE',
+        items: []
+      },
+      {
+        title: 'METAL CEILING TILE',
+        items: []
+      },
+      {
+        title: 'MINERAL WOOL TILE',
+        items: []
+      },
+      {
+        title: 'WOOD WOOL',
+        items: []
+      }
+    ]
   },
   {
     id: 3,
-    title: 'Valeri Water Pumps',
-    slug: 'valeri-water-pumps',
-    shortDesc: 'Our exclusive UAE brand designed for efficiency, durability, and performance',
-    category: 'Water Solutions',
+    title: 'CEILINGS, PARTITION & SPECIAL PROFILES',
+    slug: 'ceilings-partition-special-profiles',
+    shortDesc: 'Suspended Ceiling Channels, Partition Channels, Special Channels',
+    category: 'Ceilings, Partition & Special Profiles',
     image: '/images/valeri-pumps.jpg',
     featured: true,
     icon: '💧',
+    subcategories: [
+      {
+        title: 'SUSPENDED CEILING CHANNELS FOR GYPSUM BOARDS',
+        items: [
+          'WALL ANGLE',
+          'FURRING CHANNEL',
+          'MAIN CHANNEL',
+          'SHADOW WALL ANGLE – F PROFILE'
+        ]
+      },
+      {
+        title: 'SUSPENDED CEILING CHANNELS FOR TILES',
+        items: [
+          'MAIN TEE',
+          'CROSS TEE - 120 / 60',
+          'WALL ANGLE',
+          'SHADOW WALL ANGLE – W PROFILE'
+        ]
+      },
+      {
+        title: 'CONCEALED GRID SUSPENSION',
+        items: [
+          'SPRING TEE',
+          'EDGE TRIM /U TRIM',
+          'MAIN CHANNEL',
+          'WALL ANGLE'
+        ]
+      },
+      {
+        title: 'PARTITION CHANNELS',
+        items: [
+          'STUD',
+          'TRACK',
+          'DEEP TRACK'
+        ]
+      },
+      {
+        title: 'SPECIAL CHANNELS',
+        items: [
+          'EDGE BEAD',
+          'CORNER BEAD',
+          'PERFORATED ANGLE BEAD',
+          'PVC SHADOW BEAD',
+          'MOVEMENT BEAD'
+        ]
+      }
+    ]
   },
   {
     id: 4,
-    title: 'Thermal & Acoustic Insulation',
-    slug: 'thermal-acoustic-insulation',
-    shortDesc: 'Rockwool, Glass Wool, and Phenolic Foam for construction, marine, and industrial applications',
-    category: 'Insulation',
+    title: 'GYPSUM ACCESSORIES',
+    slug: 'gypsum-accessories',
+    shortDesc: 'Screws, Fibre Joint Tapes, Paper Tape, Metal Corner Tape, Joint Compound, Wedge Anchor, Hammer Fixing Screws, Nylon Wall Plugs, Ceiling Dowels, Concrete Screw Bolt, Acoustic Sealant, FR Sealant, Acoustical Sealing Tape, Universal Bracket, CD channel connector clip, Multiconnector, Adjustable clip, Main Channel Connector, Wire Furring Clip',
+    category: 'Gypsum Accessories',
     image: '/images/insulation.jpg',
     featured: true,
     icon: '🔥',
-  },
-  {
-    id: 5,
-    title: 'Construction Accessories & Tools',
-    slug: 'construction-accessories-tools',
-    shortDesc: 'Channels, Profiles, Screws, Tapes, Sealants, and Metal Beads for complete construction solutions',
-    category: 'Accessories',
-    image: '/images/accessories.jpg',
-    featured: false,
-    icon: '🔧',
+    subcategories: [
+      {
+        title: 'Screws',
+        items: []
+      },
+      {
+        title: 'Fibre Joint Tapes',
+        items: []
+      },
+      {
+        title: 'Paper Tape',
+        items: []
+      },
+      {
+        title: 'Metal Corner Tape',
+        items: []
+      },
+      {
+        title: 'Joint Compound',
+        items: []
+      },
+      {
+        title: 'Wedge Anchor',
+        items: []
+      },
+      {
+        title: 'Hammer Fixing Screws',
+        items: []
+      },
+      {
+        title: 'Nylon Wall Plugs',
+        items: []
+      },
+      {
+        title: 'Ceiling Dowels',
+        items: []
+      },
+      {
+        title: 'Concrete Screw Bolt',
+        items: []
+      },
+      {
+        title: 'Acoustic Sealant',
+        items: []
+      },
+      {
+        title: 'FR Sealant',
+        items: []
+      },
+      {
+        title: 'Acoustical Sealing Tape',
+        items: []
+      },
+      {
+        title: 'Universal Bracket',
+        items: []
+      },
+      {
+        title: 'CD channel connector clip',
+        items: []
+      },
+      {
+        title: 'Multiconnector',
+        items: []
+      },
+      {
+        title: 'Adjustable clip',
+        items: []
+      },
+      {
+        title: 'Main Channel Connector',
+        items: []
+      },
+      {
+        title: 'Wire Furring Clip',
+        items: []
+      }
+    ]
   },
 ]
 

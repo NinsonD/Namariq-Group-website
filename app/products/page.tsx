@@ -1,39 +1,11 @@
 'use client'
 
-import { useState, useMemo } from 'react'
-import { useTranslation } from 'react-i18next'
 import Link from 'next/link'
-import { mockProducts, mockSpecializedMaterials } from '../../lib/mockData'
-
-import ProductCard from '../../components/cards/ProductCard'
-import MaterialCard from '../../components/cards/MaterialCard'
-
-const categories = ['All', 'Building Materials', 'Construction', 'Industrial', 'Specialized Material']
+import ProductSection from '../../components/ProductSection'
 
 export default function Products() {
-  const { t } = useTranslation('common')
-  const [selectedCategory, setSelectedCategory] = useState('All')
-  const [searchTerm, setSearchTerm] = useState('')
-
-  const filteredProducts = useMemo(() => {
-    if (selectedCategory === 'Specialized Material') {
-      return mockSpecializedMaterials.filter(material => {
-        const matchesSearch = material.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                             material.shortDesc.toLowerCase().includes(searchTerm.toLowerCase())
-        return matchesSearch
-      })
-    }
-    return mockProducts.filter(product => {
-      const matchesCategory = selectedCategory === 'All' || product.category === selectedCategory
-      const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           product.shortDesc.toLowerCase().includes(searchTerm.toLowerCase())
-      return matchesCategory && matchesSearch
-    })
-  }, [selectedCategory, searchTerm])
-
   return (
     <div>
-
       {/* Hero Section */}
       <section className="relative text-white py-32" style={{ backgroundImage: 'url(/images/Hire.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -45,75 +17,8 @@ export default function Products() {
         </div>
       </section>
 
-
-
-      {/* Filters and Search */}
-      <section className="py-8 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full font-medium transition-colors duration-300 ${
-                    selectedCategory === category
-                      ? 'bg-primary text-white'
-                      : 'bg-white text-gray-700 hover:bg-blue-100 hover:text-blue-600'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-            <div className="relative w-full md:w-80">
-              <input
-                type="text"
-                placeholder="Search products..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-2 pl-10 pr-4 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-              <svg className="absolute left-3 top-2.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Products Grid */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-800">
-              {selectedCategory === 'All' ? 'All Products' : selectedCategory} ({filteredProducts.length})
-            </h2>
-          </div>
-
-          {filteredProducts.length === 0 ? (
-            <div className="text-center py-16">
-              <svg className="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-5.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
-              </svg>
-              <h3 className="text-xl font-semibold text-gray-600 mb-2">No products found</h3>
-              <p className="text-gray-500">Try adjusting your search or filter criteria.</p>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {selectedCategory === 'Specialized Material' ? (
-                filteredProducts.map((material) => (
-                  <MaterialCard key={material.id} material={material} />
-                ))
-              ) : (
-                filteredProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
-                ))
-              )}
-            </div>
-          )}
-        </div>
-      </section>
+      {/* Product Section */}
+      <ProductSection />
 
       {/* CTA Section */}
       <section className="py-16 text-white" style={{ backgroundImage: 'url(/images/Hire.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
