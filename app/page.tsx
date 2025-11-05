@@ -1,9 +1,16 @@
 'use client'
 
 import Link from 'next/link'
+import { useEffect, useRef } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Hero from '../components/Hero'
+import ProductsSlider from '../components/ProductsSlider'
+import ServicesSlider from '../components/ServicesSlider'
 import TestimonialsCarousel from '../components/TestimonialsCarousel'
-import { mockProducts, mockServices, mockClients, mockTestimonials } from '../lib/mockData'
+import { mockProducts, mockClients, mockTestimonials } from '../lib/mockData'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const mockSpecializedMaterials = [
   {
@@ -27,6 +34,54 @@ const mockSpecializedMaterials = [
 ]
 
 export default function Home() {
+  const servicesRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    // GSAP animations for Services section
+    if (servicesRef.current) {
+      const serviceCards = servicesRef.current.querySelectorAll('.service-card-modern')
+
+      gsap.fromTo(serviceCards,
+        {
+          opacity: 0,
+          x: -50,
+          rotationY: -90
+        },
+        {
+          opacity: 1,
+          x: 0,
+          rotationY: 0,
+          duration: 1,
+          stagger: 0.15,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: servicesRef.current,
+            start: "top 75%",
+            toggleActions: "play none none reverse"
+          }
+        }
+      )
+
+      // Add floating animation to icons
+      serviceCards.forEach((card) => {
+        const icon = card.querySelector('.icon-container')
+
+        gsap.to(icon, {
+          y: -10,
+          duration: 2,
+          ease: "power2.inOut",
+          yoyo: true,
+          repeat: -1,
+          delay: Math.random() * 2
+        })
+      })
+    }
+
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill())
+    }
+  }, [])
+
   return (
     <div>
       <Hero />
@@ -55,44 +110,17 @@ export default function Home() {
       <section className="section-padding bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12 text-gradient">Our Products</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {mockProducts.map((product) => (
-              <div key={product.id} className="product-card-modern group"style={{ backgroundImage: 'url(/images/Hire.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                <div className="flex items-center justify-center mb-6">
-                  <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center" style={{ backgroundImage: 'url(/images/Hire.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                    <span className="text-3xl">{product.icon}</span>
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold mb-4 text-center" >{product.title}</h3>
-                <p className="mb-6 text-center text-blue-100">{product.shortDesc}</p>
-                <div className="text-center">
-                  <Link href="/products" className="text-blue-200 hover:text-white font-medium transition-colors duration-300 group-hover:text-white">
-                    View Products →
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
+          <ProductsSlider />
         </div>
       </section>
 
       {/* Services Highlights */}
-      <section className="section-padding bg-gradient-to-br from-white to-gray-50"style={{ backgroundImage: 'url(/images/Hire.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12 text-gradient">Our Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {mockServices.map((service) => (
-              <div key={service.id} className="service-card-modern group">
-                <div className="icon-container group-hover:animate-glow">
-                  <span className="text-4xl text-white">{service.icon}</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">{service.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{service.summary}</p>
-              </div>
-            ))}
-          </div>
+      <section className="section-padding bg-gradient-to-br from-white to-gray-50" style={{ backgroundImage: 'url(/images/Hire.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="container mx-auto px-4 mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 text-gradient">Our Services</h2>
         </div>
-      </section>
+        <ServicesSlider />
+      </section>  
 
       {/* Specialized Materials Teaser */}
       {/* <section className="section-padding bg-gradient-to-br from-purple-50 to-pink-50">
@@ -219,11 +247,11 @@ export default function Home() {
       <TestimonialsCarousel />
 
       {/* CTA Section */}
-      <section className="cta-modern relative" style={{ backgroundImage: 'url(/images/Hire.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <div className="absolute inset-0 bg-pattern-dots opacity-10"></div>
+      <section className="cta-modern relative" style={{ backgroundImage: 'url(/images/footer.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="absolute inset-0 bg-black bg-opacity-25"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-shadow">Ready to Start Your Project?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-white text-opacity-90 leading-relaxed">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-shadow"style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>Ready to Start Your Project?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-white text-opacity-90 leading-relaxed"style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.8)' }}>
             Operating through 7 branches across the UAE, Al Namariq stands as a symbol of innovation, service excellence, and customer trust in both the construction and technology sectors.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

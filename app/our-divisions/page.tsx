@@ -56,12 +56,12 @@ export default function OurDivisions() {
     <div>
 
       {/* Hero Section */}
-      <section className="relative text-white py-32" style={{ backgroundImage: 'url(/images/Hire.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <section className="relative text-white py-32" style={{ backgroundImage: 'url(/images/Hero2.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Divisions</h1>
-            <p className="text-xl md:text-2xl mb-8">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6"style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>Our Divisions</h1>
+            <p className="text-xl md:text-2xl mb-8"style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.8)' }}>
               Operating through 7 branches across the UAE, Al Namariq stands as a symbol of innovation, service excellence, and customer trust in both the construction and technology sectors.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -103,10 +103,11 @@ export default function OurDivisions() {
 
 
       {/* CTA Section */}
-      <section className="py-16 bg-secondary text-white" style={{ backgroundImage: 'url(/images/Hire.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Work with Our Divisions?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
+      <section className="py-16 bg-secondary text-white relative" style={{ backgroundImage: 'url(/images/footer3.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="absolute inset-0 bg-black bg-opacity-25"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h2 className="text-3xl font-bold mb-4"style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>Ready to Work with Our Divisions?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto"style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.8)' }}>
             Contact us today to discuss how our specialized divisions can support your construction project needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

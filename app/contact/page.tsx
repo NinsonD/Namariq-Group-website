@@ -62,12 +62,12 @@ export default function Contact() {
     <div>
       {/* <Breadcrumbs items={[]} currentPage="Contact" /> */}
       {/* Hero Section */}
-      <section className="relative text-white py-32" style={{ backgroundImage: 'url(/images/Hire.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <section className="relative text-white py-32" style={{ backgroundImage: 'url(/images/contact.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
-            <p className="text-xl md:text-2xl mb-8">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>Contact Us</h1>
+            <p className="text-xl md:text-2xl mb-8" style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.8)' }}>
               Operating through 7 branches across the UAE, Al Namariq stands as a symbol of innovation, service excellence, and customer trust in both the construction and technology sectors.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

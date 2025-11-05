@@ -51,16 +51,7 @@ const teamMembers = [
     department: 'Sales',
     image: '/team/ahmed.jpg',
   },
-]
-
-const certifications = [
-  { name: 'ISO 9001', image: '/certifications/iso9001.png' },
-  { name: 'ISO 14001', image: '/certifications/iso9001.png' },
-  { name: 'OHSAS 18001', image: '/certifications/iso9001.png' },
-  { name: 'CE Mark', image: '/certifications/iso9001.png' },
-  { name: 'UAE Standards', image: '/certifications/iso9001.png' },
-  { name: 'GCC Accreditation', image: '../public/certifications/iso9001.png' },
-]
+] 
 
 export default function About() {
   const { t } = useTranslation('common')
@@ -69,11 +60,11 @@ export default function About() {
     <div>
 
       {/* Hero Section */}
-      <section className="relative text-white py-32" style={{ backgroundImage: 'url(/images/Hire.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <section className="relative text-white py-32" style={{ backgroundImage: 'url(/images/Hero1.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">About Al Namariq Group of Companies</h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6"style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>About Al Namariq Group of Companies</h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.8)' }}>
             Established in the United Arab Emirates, Al Namariq Group has evolved into a multi-division enterprise with strong foundations in construction materials trading, interior contracting, insulation systems, pumping solutions, IT technology, and healthcare services.
           </p>
         </div>
@@ -84,7 +75,7 @@ export default function About() {
         {/* Mission */}
         <div className="responsive-container-block bigContainer">
           <div className="responsive-container-block Container">
-            <img className="mainImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/eaboutus1.svg" />
+            <img className="mainImg" src="/images/mission.jpg" />
             <div className="allText aboveText">
               <p className="text-blk headingText">
                 Our Mission
@@ -98,7 +89,7 @@ export default function About() {
             </div>
           </div>
           <div className="responsive-container-block Container bottomContainer">
-            <img className="mainImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/xpraup2.svg" />
+            <img className="mainImg" src="/images/vision.jpg" />
             <div className="allText bottomText">
               <p className="text-blk headingText">
                 Our Vision
@@ -136,32 +127,12 @@ export default function About() {
         </div>
       </section>
 
-
-
-      {/* Certifications */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Certifications & Accreditations</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {certifications.map((cert) => (
-              <div key={cert.name} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="font-semibold text-gray-800">{cert.name}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
-      <section className="py-16 bg-gradient-to-r text-white" style={{ backgroundImage: 'url(/images/Hire.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Join Our Team</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
+      <section className="py-16 bg-gradient-to-r text-white relative" style={{ backgroundImage: 'url(/images/footer2.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="absolute inset-0 bg-black bg-opacity-25"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4"style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>Join Our Team</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto" style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.8)' }}>
             We're always looking for talented individuals to join our growing team. Explore career opportunities with Al Namariq Group of Companies.
           </p>
           <Link

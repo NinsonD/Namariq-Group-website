@@ -65,13 +65,13 @@ export default function Hero() {
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${slide.image})` }}
           ></div>
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-25"></div>
           <div className="relative z-10 flex items-center justify-center h-full">
             <div className="text-center text-white px-4 max-w-4xl mx-auto min-h-[400px] flex flex-col justify-center">
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
                 {slide.title}
               </h1>
-              <p className="text-xl md:text-2xl mb-8">
+              <p className="text-xl md:text-2xl mb-8" style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.8)' }}>
                 {slide.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -96,7 +96,7 @@ export default function Hero() {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-3 rounded-full transition-all duration-300"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white bg-opacity-40 hover:bg-opacity-60 text-black p-3 rounded-full transition-all duration-300 border-2 border-white shadow-lg"
         aria-label="Previous slide"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -105,7 +105,7 @@ export default function Hero() {
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-3 rounded-full transition-all duration-300"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white bg-opacity-40 hover:bg-opacity-60 text-black p-3 rounded-full transition-all duration-300 border-2 border-white shadow-lg"
         aria-label="Next slide"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -119,8 +119,8 @@ export default function Hero() {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide ? 'bg-white' : 'bg-white bg-opacity-50'
+            className={`w-4 h-4 rounded-full transition-all duration-300 border-2 border-white shadow-lg ${
+              index === currentSlide ? 'bg-white' : 'bg-white bg-opacity-70'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
@@ -128,7 +128,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 animate-bounce" style={{ filter: 'drop-shadow(0 0 4px rgba(0,0,0,0.8))' }}>
         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
         </svg>
