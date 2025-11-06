@@ -87,7 +87,7 @@ export default function TestimonialsCarousel() {
   return (
     <section className="section-padding bg-gradient-to-br from-white to-blue-50">
       <div className="w-full">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12 text-gradient">
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-cyan-500 to-teal-400 animate-gradient text-center">
           What Our Clients Say
         </h2>
         <div

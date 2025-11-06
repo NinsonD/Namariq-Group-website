@@ -34,7 +34,7 @@ export const mockProducts = [
     slug: 'acoustic-ceiling-solutions',
     shortDesc: 'Gypsum Acoustic Tile, Mineral Fibre Acoustical Tile, Metal Ceiling Tile, Mineral Wool Tile, Wood Wool',
     category: 'Acoustic Ceiling Solutions',
-    image: '/images/ceiling-tiles.jpg',
+    image: '/images/ceiling-tiles.webp',
     featured: true,
     icon: '🏠',
     subcategories: [
@@ -66,7 +66,7 @@ export const mockProducts = [
     slug: 'ceilings-partition-special-profiles',
     shortDesc: 'Suspended Ceiling Channels, Partition Channels, Special Channels',
     category: 'Ceilings, Partition & Special Profiles',
-    image: '/images/valeri-pumps.jpg',
+    image: '/images/valeri-pumps.webp',
     featured: true,
     icon: '💧',
     subcategories: [
@@ -125,7 +125,7 @@ export const mockProducts = [
     category: 'Gypsum Accessories',
     image: '/images/insulation.jpg',
     featured: true,
-    icon: '🔥',
+    icon: '🔥', 
     subcategories: [
       {
         title: 'Screws',
@@ -213,121 +213,72 @@ export const mockServices = [
     title: 'Building Materials Supply & Distribution',
     summary: 'Comprehensive construction materials and supplies across 7 UAE branches',
     icon: '🏗️',
+    slug: 'building-materials',
+    features: [
+      'Premium quality construction materials',
+      'Wide distribution network across UAE',
+      'Expert product consultation'
+    ],
   },
   {
     id: 2,
     title: 'Interior Fit-Out & Ceiling Works',
     summary: 'Custom-designed acoustic, decorative, and functional ceiling systems',
     icon: '🔧',
+    slug: 'interior-fit-out',
+    features: [
+      'Acoustic & decorative ceiling systems',
+      'Custom interior solutions',
+      'Professional installation services'
+    ],
   },
   {
     id: 3,
     title: 'Thermal & Acoustic Insulation Solutions',
     summary: 'High-performance insulation materials for construction, marine, and industrial sectors',
     icon: '📋',
+    slug: 'insulation-solutions',
+    features: [
+      'Thermal insulation materials',
+      'Acoustic insulation solutions',
+      'Marine & industrial applications'
+    ],
   },
   {
     id: 4,
     title: 'Water Pump Design, Sales & Service',
     summary: 'Valeri brand pumps designed for efficiency, durability, and performance',
     icon: '💧',
+    slug: 'water-pump-solutions',
+    features: [
+      'Valeri brand premium pumps',
+      'Custom pump system design',
+      'Maintenance & repair services'
+    ],
   },
   {
     id: 5,
     title: 'Healthcare & Aesthetic Treatments',
     summary: 'Excellence in aesthetic dermatology, dentistry, and wellness care at Carewell Clinics',
     icon: '🏥',
+    slug: 'healthcare',
+    features: [
+      'Aesthetic dermatology',
+      'Advanced dental care',
+      'Wellness treatments'
+    ],
   },
   {
     id: 6,
     title: 'IT & Digital Transformation Solutions',
     summary: 'ERPNext, POS, and AI-based marketing tools for smarter business systems',
     icon: '💻',
-  },
-]
-
-export const mockClients = [
-  { id: 1, name: 'Client 1', logo: '/images/client1.png' },
-  { id: 2, name: 'Client 2', logo: '/images/client2.png' },
-  { id: 3, name: 'Client 3', logo: '/images/client3.png' },
-  { id: 4, name: 'Client 4', logo: '/images/client4.png' },
-  { id: 5, name: 'Client 5', logo: '/images/client5.png' },
-  { id: 7, name: 'Client 6', logo: '/images/client6.png' },
-  { id: 8, name: 'Client 7', logo: '/images/client6.png' },
-  { id: 9, name: 'Client 8', logo: '/images/client6.png' },
-  { id: 10, name: 'Client 9', logo: '/images/client6.png' },
-  { id: 11, name: 'Client 10', logo: '/images/client6.png' },
-  { id: 12, name: 'Client 11', logo: '/images/client6.png' },
-  { id: 13, name: 'Client 12', logo: '/images/client6.png' },
-  { id: 14, name: 'Client 13', logo: '/images/client6.png' },
-]
-
-export const mockSpecializedMaterials = [
-  {
-    id: 1,
-    title: 'Fire Resistant Panels',
-    slug: 'fire-resistant-panels',
-    shortDesc: 'Advanced fire protection materials for construction safety',
-    category: 'Safety Materials',
-    applications: ['Commercial buildings', 'Industrial facilities', 'Residential complexes'],
-    certifications: ['BS 476', 'EN 13501', 'ASTM E84'],
-    image: '/images/fire-panels.jpg',
-    featured: true,
-  },
-  {
-    id: 2,
-    title: 'Thermal Insulation Boards',
-    slug: 'thermal-insulation-boards',
-    shortDesc: 'High-performance thermal insulation for energy efficiency',
-    category: 'Insulation',
-    applications: ['Roofing systems', 'Wall insulation', 'Cold storage'],
-    certifications: ['ISO 9001', 'EN 13165', 'ASTM C518'],
-    image: '/images/thermal-insulation.jpg',
-    featured: false,
-  },
-  {
-    id: 3,
-    title: 'Acoustic Panels',
-    slug: 'acoustic-panels',
-    shortDesc: 'Sound-absorbing panels for noise control',
-    category: 'Insulation',
-    applications: ['Auditoriums', 'Offices', 'Educational facilities'],
-    certifications: ['ISO 354', 'ASTM C423', 'EN ISO 11654'],
-    image: '/images/acoustic-panels.jpg',
-    featured: true,
-  },
-  {
-    id: 4,
-    title: 'Waterproofing Membranes',
-    slug: 'waterproofing-membranes',
-    shortDesc: 'Premium waterproofing solutions for construction',
-    category: 'Waterproofing',
-    applications: ['Roofing', 'Basements', 'Tunnels'],
-    certifications: ['EN 13956', 'ASTM D412', 'ISO 14001'],
-    image: '/images/waterproofing.jpg',
-    featured: false,
-  },
-  {
-    id: 5,
-    title: 'Corrosion Resistant Coatings',
-    slug: 'corrosion-resistant-coatings',
-    shortDesc: 'Advanced coatings for metal protection',
-    category: 'Protective Coatings',
-    applications: ['Oil & gas', 'Marine structures', 'Industrial equipment'],
-    certifications: ['NACE', 'SSPC', 'ISO 12944'],
-    image: '/images/corrosion-coatings.jpg',
-    featured: true,
-  },
-  {
-    id: 6,
-    title: 'High-Strength Concrete Admixtures',
-    slug: 'high-strength-concrete-admixtures',
-    shortDesc: 'Specialized admixtures for superior concrete performance',
-    category: 'Concrete Solutions',
-    applications: ['High-rise buildings', 'Bridges', 'Precast elements'],
-    certifications: ['EN 934', 'ASTM C494', 'BS 5075'],
-    image: '/images/concrete-admixtures.jpg',
-    featured: false,
+    slug: 'it-solutions',
+    features: [
+      'ERPNext implementation',
+      'POS system solutions',
+      'AI-powered marketing tools'
+    ],
   },
 ]
 

@@ -2,14 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap');
+
 @layer base {
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-gray-50 text-gray-900;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    @apply bg-gray-50 text-neutral-850 font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl leading-tight text-white;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl mb-6 text-white;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl lg:text-4xl mb-4;
+  }
+
+  p {
+    @apply text-lg leading-relaxed text-white;
   }
 
   /* Modern gradient backgrounds */
@@ -195,6 +216,17 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Animated gradient utility (global) */
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .animate-gradient {
+    background-size: 200% auto;
+    animation: gradient 4s ease infinite;
   }
 
   .animate-scroll {

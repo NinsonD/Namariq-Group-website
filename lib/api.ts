@@ -1,4 +1,4 @@
-import { mockProducts, mockServices, mockSpecializedMaterials } from './mockData'
+import { mockProducts, mockServices} from './mockData'
 
 // API Base URL - will be configurable via environment variables
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api'
