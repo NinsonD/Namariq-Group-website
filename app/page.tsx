@@ -433,30 +433,7 @@ export default function Home() {
         `}</style>
       </section>
 
-      {/* Specialized Materials Teaser */}
-      {/* <section className="section-padding bg-gradient-to-br from-purple-50 to-pink-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12 text-gradient">Specialized Materials</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {mockSpecializedMaterials.map((material) => (
-              <div key={material.id} className="card-gradient bg-gradient-to-br from-purple-500 to-pink-600 group">
-                <div className="flex items-center justify-center mb-6">
-                  <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                    <span className="text-3xl">🔥</span>
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-center text-primary">{material.title}</h3>
-                <p className="mb-6 text-center text-purple-100">{material.shortDesc}</p>
-                <div className="text-center">
-                  <Link href="/specialized-materials" className="text-purple-200 hover:text-white font-medium transition-colors duration-300 group-hover:text-white">
-                    Learn More →
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
+      {/* Specialized Materials section removed */}
 
       {/* Clients Strip */}
 
