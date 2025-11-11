@@ -109,7 +109,7 @@ export default function Header() {
         </button>
 
         <div className="hidden md:block">
-          <a href="https://shop.namariqgroup.com" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center px-4 py-2 rounded-full font-semibold transition-all duration-300 hover:scale-105 bg-primary text-white hover:bg-red-600`}>
+          <a href="https://shop.namariqgroup.com" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center px-4 py-2 rounded-full font-semibold transition-all duration-300 hover:scale-105 bg-primary-500 text-white hover:bg-primary-600`}>
             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
             </svg>
@@ -154,7 +154,7 @@ export default function Header() {
                 Contact Us
               </Link>
               <div className="px-6 py-3 border-t border-gray-200">
-                 <a href="https://shop.namariqgroup.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-4 py-2 mx-2 rounded-full font-semibold bg-primary text-white hover:bg-red-600 transition-colors duration-300" onClick={closeMobileMenu}>
+                 <a href="https://shop.namariqgroup.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-4 py-2 mx-2 rounded-full font-semibold bg-primary-500 text-white hover:bg-primary-600 transition-colors duration-300" onClick={closeMobileMenu}>
                 <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                 </svg>
