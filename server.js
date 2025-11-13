@@ -3,7 +3,7 @@ const { parse } = require('url')
 const next = require('next')
 
 const dev = process.env.NODE_ENV !== 'production'
-const hostname = process.env.NODE_ENV === 'production' ? '127.0.0.1' : 'localhost'
+const hostname = '0.0.0.0' // Bind to all interfaces for aPanel
 const port = parseInt(process.env.PORT || '3000', 10)
 
 const app = next({ dev, hostname, port })
@@ -17,6 +17,14 @@ app.prepare().then(() => {
         res.writeHead(200, { 'Content-Type': 'text/plain' })
         res.end('ok')
         return
+      }
+
+      // Log all requests for debugging
+      console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`)
+
+      // Log API requests specifically
+      if (req.url.startsWith('/api/')) {
+        console.log(`API Request: ${req.method} ${req.url}`)
       }
 
       const parsedUrl = parse(req.url, true)
@@ -34,5 +42,6 @@ app.prepare().then(() => {
   .listen(port, hostname, () => {
     console.log(`> Next.js server listening on http://${hostname}:${port}`)
     console.log(`> Environment: ${dev ? 'development' : 'production'}`)
+    console.log(`> API routes should be accessible at http://localhost:${port}/api/*`)
   })
 })

@@ -21,12 +21,19 @@ function ImpressiveProducts(): React.ReactElement {
     let mounted = true
     ;(async () => {
       try {
+        console.log('Fetching products from /api/products')
         const res = await fetch('/api/products')
-        if (!res.ok) throw new Error('failed')
+        console.log('API response status:', res.status)
+        if (!res.ok) {
+          console.error('API request failed:', res.status, res.statusText)
+          throw new Error('failed')
+        }
         const data = await res.json()
+        console.log('API response data:', data)
         if (!mounted) return
         setApiProducts(data.products || [])
       } catch (e) {
+        console.error('Error fetching products:', e)
         setApiProducts([])
       } finally {
         setApiLoaded(true)

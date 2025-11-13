@@ -1,0 +1,56 @@
+# Production Dependencies for aPanel Manual Installation
+# This file lists all required npm modules in installation order
+
+# CORE FRAMEWORK
+next@14.2.33
+react@18.3.1
+react-dom@18.3.1
+
+# FORMS & VALIDATION
+react-hook-form@7.65.0
+@hookform/resolvers@5.2.2
+zod@4.1.12
+
+# INTERNATIONALIZATION (i18n)
+i18next@25.5.2
+i18next-browser-languagedetector@8.2.0
+i18next-http-backend@3.0.2
+react-i18next@16.0.0
+
+# EMAIL & COMMUNICATION
+nodemailer@7.0.10
+next-seo@7.0.1
+
+# UI COMPONENTS (Radix UI)
+@radix-ui/react-accordion@1.2.12
+@radix-ui/react-dialog@1.1.15
+@radix-ui/react-label@2.1.7
+@radix-ui/react-slot@1.2.3
+@radix-ui/react-tabs@1.1.13
+
+# UI UTILITIES
+lucide-react@0.546.0
+embla-carousel-react@8.6.0
+shadcn-ui@0.9.5
+clsx@2.1.1
+class-variance-authority@0.7.1
+tailwind-merge@3.3.1
+
+# STYLING & CSS
+tailwindcss@3.4.17
+autoprefixer@10.4.21
+postcss@8.5.6
+
+# ANIMATIONS
+gsap@3.13.0
+
+# ANALYTICS & TRACKING
+gtag@1.0.1
+react-ga4@2.1.0
+react-facebook-pixel@1.0.4
+react-google-recaptcha-v3@1.11.0
+
+# USER CONSENT
+react-cookie-consent@9.0.0
+
+# TOTAL: 32 packages
