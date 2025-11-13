@@ -820,14 +820,14 @@ const ProductSection = () => {
     <section className="flex flex-col lg:flex-row gap-8 px-6 py-10">
       {/* Sidebar */}
       <aside className="w-full lg:w-1/4 border-r border-gray-200 pl-12">
-        <h2 className="text-lg font-bold mb-4">Product Categories</h2>  
+        <h2 className="text-lg font-bold mb-4 text-blue-600">Product Categories</h2>
         <ul className="space-y-2 text-gray-700">
           {categories.map((cat) => (
             <li key={cat.name}>
               <button
                 onClick={() => handleCategoryClick(cat.name)}
-                className={`block w-full text-left hover:text-secondary font-semibold ${
-                  selectedCategory === cat.name ? "text-primary" : ""
+                className={`block w-full text-left hover:text-secondary-500 font-semibold ${
+                  selectedCategory === cat.name ? "text-primary-500" : ""
                 }`}
               >
                 {cat.name}
@@ -838,8 +838,8 @@ const ProductSection = () => {
                     <li key={sub}>
                       <button
                         onClick={() => handleSubcategoryClick(sub)}
-                        className={`block w-full text-left text-sm hover:text-secondary ${
-                          selectedSubcategory === sub ? "text-secondary font-semibold" : ""
+                        className={`block w-full text-left text-sm hover:text-secondary-500 ${
+                          selectedSubcategory === sub ? "text-secondary-500 font-semibold" : ""
                         }`}
                       >
                         {sub}
