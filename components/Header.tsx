@@ -72,13 +72,7 @@ export default function Header() {
           }`}>
             Products
           </Link>
-          <Link href="/services" className={`font-bold transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
-            pathname === '/services' ? 'underline' : ''
-          } ${
-            isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
-          }`}>
-            Services
-          </Link>
+          {/* Services link removed per request */}
           {/* <Link href="/specialized-materials" className={`font-bold transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${
             pathname === '/specialized-materials' ? 'underline' : ''
           } ${
@@ -143,11 +137,7 @@ export default function Header() {
               }`} onClick={closeMobileMenu}>
                 Products
               </Link>
-              <Link href="/services" className={`px-6 py-3 transition-colors duration-300 ${
-                pathname === '/services' ? 'bg-blue-100 text-blue-600' : 'text-gray-800 hover:bg-gray-100 hover:text-blue-600'
-              }`} onClick={closeMobileMenu}>
-                Services
-              </Link>
+              {/* Services link removed from mobile menu per request */}
               <Link href="/contact" className={`px-6 py-3 transition-colors duration-300 ${
                 pathname === '/contact' ? 'bg-blue-100 text-blue-600' : 'text-gray-800 hover:bg-gray-100 hover:text-blue-600'
               }`} onClick={closeMobileMenu}>

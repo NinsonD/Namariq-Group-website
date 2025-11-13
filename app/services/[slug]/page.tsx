@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { mockServices } from '../../../lib/mockData'
 
 interface ServiceDetailPageProps {
@@ -151,7 +152,7 @@ export default function ServiceDetailPage({ params }: ServiceDetailPageProps) {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <span className="text-5xl">{service.icon}</span>
+              <Image src="/src/logo/nbm.png" alt="NBM logo" width={72} height={72} className="object-contain" priority={false} />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">{service.title}</h1>
             <p className="text-xl md:text-2xl mb-8">{details.description}</p>
@@ -243,7 +244,7 @@ export default function ServiceDetailPage({ params }: ServiceDetailPageProps) {
                   <div className="bg-gradient-to-br from-green-100 to-blue-100 p-8 rounded-lg">
                     <div className="text-center">
                       <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span className="text-white text-3xl">{service.icon}</span>
+                        <Image src="/src/logo/nbm.png" alt="NBM logo" width={48} height={48} className="object-contain" priority={false} />
                       </div>
                       <h3 className="text-2xl font-bold text-gray-800 mb-4">Ready to Get Started?</h3>
                       <p className="text-gray-700 mb-6">
@@ -326,7 +327,7 @@ export default function ServiceDetailPage({ params }: ServiceDetailPageProps) {
             {mockServices.filter(s => s.id !== service.id).map((relatedService) => (
               <div key={relatedService.id} className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
-                  <span className="text-green-600 text-3xl">{relatedService.icon}</span>
+                  <Image src="/src/logo/nbm.png" alt="NBM logo" width={40} height={40} className="object-contain" priority={false} />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">{relatedService.title}</h3>
                 <p className="text-gray-600 mb-6">{relatedService.summary}</p>

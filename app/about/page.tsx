@@ -6,22 +6,22 @@ import Link from 'next/link'
 
 const timelineEvents = [
   {
-    year: '2010',
+    year: '1996',
     title: 'Company Founded',
     description: 'Al Namariq Group of Companies was established with a vision to provide exceptional construction materials and services.',
   },
   {
-    year: '2015',
+    year: '2005',
     title: 'Expansion',
     description: 'Expanded operations across the UAE with multiple branches and increased product portfolio.',
   },
   {
-    year: '2018',
+    year: '2010',
     title: 'Specialized Materials Division',
     description: 'Launched specialized materials division focusing on advanced construction solutions.',
   },
   {
-    year: '2020',
+    year: '2015',
     title: 'Digital Transformation',
     description: 'Implemented modern digital systems and online platforms for better customer service.',
   },

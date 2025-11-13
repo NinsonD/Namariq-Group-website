@@ -207,12 +207,19 @@ export const mockProducts = [
   },
 ]
 
-export const mockServices = [
+export const mockServices: Array<{
+  id: number
+  title: string
+  summary: string
+  image: string
+  slug: string
+  features: string[]
+}> = [
   {
     id: 1,
     title: 'Building Materials Supply & Distribution',
     summary: 'Comprehensive construction materials and supplies across 7 UAE branches',
-    icon: '🏗️',
+    image: '/images/nbm-logo.png',
     slug: 'building-materials',
     features: [
       'Premium quality construction materials',
@@ -224,7 +231,7 @@ export const mockServices = [
     id: 2,
     title: 'Interior Fit-Out & Ceiling Works',
     summary: 'Custom-designed acoustic, decorative, and functional ceiling systems',
-    icon: '🔧',
+    image: '/images/nbm-logo.png',
     slug: 'interior-fit-out',
     features: [
       'Acoustic & decorative ceiling systems',
@@ -236,7 +243,7 @@ export const mockServices = [
     id: 3,
     title: 'Thermal & Acoustic Insulation Solutions',
     summary: 'High-performance insulation materials for construction, marine, and industrial sectors',
-    icon: '📋',
+    image: '/images/nbm-logo.png',
     slug: 'insulation-solutions',
     features: [
       'Thermal insulation materials',
@@ -248,7 +255,7 @@ export const mockServices = [
     id: 4,
     title: 'Water Pump Design, Sales & Service',
     summary: 'Valeri brand pumps designed for efficiency, durability, and performance',
-    icon: '💧',
+    image: '/images/nbm-logo.png',
     slug: 'water-pump-solutions',
     features: [
       'Valeri brand premium pumps',
@@ -260,7 +267,7 @@ export const mockServices = [
     id: 5,
     title: 'Healthcare & Aesthetic Treatments',
     summary: 'Excellence in aesthetic dermatology, dentistry, and wellness care at Carewell Clinics',
-    icon: '🏥',
+    image: '/images/nbm-logo.png',
     slug: 'healthcare',
     features: [
       'Aesthetic dermatology',
@@ -272,12 +279,12 @@ export const mockServices = [
     id: 6,
     title: 'IT & Digital Transformation Solutions',
     summary: 'ERPNext, POS, and AI-based marketing tools for smarter business systems',
-    icon: '💻',
+    image: '/images/nbm-logo.png',
     slug: 'it-solutions',
     features: [
       'ERPNext implementation',
-      'POS system solutions',
-      'AI-powered marketing tools'
+      'Networking & POS systems',
+      'CCTV & security systems'
     ],
   },
 ]

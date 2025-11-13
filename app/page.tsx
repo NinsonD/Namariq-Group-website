@@ -1,11 +1,11 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Hero from '../components/Hero'
-import ServicesSlider from '../components/ServicesSlider'
 import TestimonialsCarousel from '../components/TestimonialsCarousel'
 import { mockProducts, mockServices, mockTestimonials } from '../lib/mockData'
 import { Service } from '../types/service'
@@ -366,7 +366,10 @@ export default function Home() {
                       WebkitBackfaceVisibility: 'hidden'
                     }}
                   >
-                    <div className="mb-6 text-5xl animate-float">{service.icon}</div>
+                      {/* NBM logo */}
+                      <div className="mb-6 w-16 h-16 mx-auto flex items-center justify-center">
+                        <Image src="/src/logo/nbm.png" alt="NBM logo" width={64} height={64} className="object-contain" priority={false} />
+                      </div>
                     <h3 className="text-2xl font-bold mb-4 text-neutral-950 transform transition-all duration-300 group-hover:scale-105 group-hover:text-white">{service.title}</h3>
                     <p className="text-gray-600 flex-grow">{service.summary}</p>
                     <div className="mt-6">
@@ -383,7 +386,10 @@ export default function Home() {
                       transform: 'rotateY(180deg)'
                     }}
                   >
-                    <div className="mb-6 text-5xl animate-float-reverse">{service.icon}</div>
+                      {/* NBM logo on back face */}
+                      <div className="mb-6 w-16 h-16 mx-auto flex items-center justify-center">
+                        <Image src="/src/logo/nbm.png" alt="NBM logo" width={64} height={64} className="object-contain" priority={false} />
+                      </div>
                     <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
                     <ul className="space-y-3 text-gray-300 flex-grow list-inside list-disc">
                       {service.features?.slice(0, 3).map((feature, i) => (
