@@ -7,7 +7,7 @@ export default function Products() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative text-white py-32" style={{ backgroundImage: 'url(/images/Hero3.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+  <section className="relative text-white py-32" style={{ backgroundImage: 'url(/images/hero3.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-primary mb-6"style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>Our Products</h1>

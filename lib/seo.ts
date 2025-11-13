@@ -29,7 +29,7 @@ export const baseSEO: SEOProps = {
     'Al Namariq Group',
     'building supplies UAE'
   ],
-  image: '/images/hero1.webp',
+  image: '/images/hero1.jpg',
   url: 'https://alnamariq.com',
   type: 'website'
 }
